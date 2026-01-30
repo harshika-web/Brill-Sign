@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrillSign | Secure Digital Signatures</title>
+    <meta name="description"
+        content="BrillSign is the most secure digital signature platform. Sign, track, and manage your documents with ease.">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" rx="8" fill="#003755" />
+                        <path d="M10 10H22M10 16H18M10 22H22" stroke="white" stroke-width="2.5"
+                            stroke-linecap="round" />
+                        <path d="M22 17L25 20L28 17" stroke="#00ADEF" stroke-width="2.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <circle cx="21" cy="11" r="3" fill="#00ADEF" />
+                    </svg>
+                </div>
+                <div class="logo-text">Brill<span>Sign</span></div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#security">Security</a></li>
+            </ul>
+            <div class="nav-btns">
+                <a href="#" class="btn-text">Login</a>
+                <a href="#" class="btn-primary">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="floating-icons" id="floating-icons">
+            <div class="icon signature" style="top: 15%; left: 10%;">
+                <div class="doc-card">
+                    <svg viewBox="0 0 24 24" width="28" height="28">
+                        <path fill="#00ADEF"
+                            d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.88,8.88M3,17.25V21H6.75L17.81,9.93L14.07,6.19L3,17.25Z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="icon secure-pdf" style="top: 12%; right: 18%;">
+                <div class="doc-card">
+                    <svg viewBox="0 0 24 24" width="28" height="28">
+                        <path fill="#FF4B4B"
+                            d="M14,2H6C4.89,2 4,2.89 4,4v16c0,1.1 0.9,2 2,2h12c1.1,0 2-0.9 2-2V8L14,2z M13,9V3.5L18.5,9H13z M12,17c-1.1,0-2-0.9-2-2s0.9-2 2-2s2,0.9,2,2S13.1,17,12,17z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="icon cloud-sign" style="top: 40%; left: 82%;">
+                <div class="doc-card">
+                    <svg viewBox="0 0 24 24" width="30" height="30">
+                        <path fill="#8A2BE2"
+                            d="M19.35,10.04C18.67,6.59 15.64,4 12,4C9.11,4 6.6,5.64 5.35,8.04C2.34,8.36 0,10.91 0,14c0,3.31 2.69,6 6,6h13c2.76,0 5-2.24 5-5C24,12.36 21.95,10.22 19.35,10.04z M13,13v4h-2v-4H8l4-4l4,4H13z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="icon locked" style="top: 45%; left: 5%;">
+                <div class="doc-card">
+                    <svg viewBox="0 0 24 24" width="28" height="28">
+                        <path fill="#FFD700"
+                            d="M12,17a2,2 0 1,0,0-4,2,2,0,0,0,0,4z M18,8h-1V6c0-2.76-2.24-5-5-5S7,3.24,7,6v2H6c-1.1,0-2,0.9-2,2v10c0,1.1,0.9,2,2,2h12c1.1,0,2-0.9,2-2V10C20,8.9,19.1,8,18,8z M9,6c0-1.66,1.34-3,3-3s3,1.34,3,3v2H9V6z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="icon verified" style="top: 60%; left: 18%;">
+                <div class="doc-card">
+                    <svg viewBox="0 0 24 24" width="30" height="30">
+                        <path fill="#4BFF91"
+                            d="M12,2C6.48,2 2,6.48 2,12s4.48,10 12,10 10-4.48 10-10S17.52,2 12,2z M10,17l-5-5l1.41-1.41L10,14.17l7.59-7.59L19,8L10,17z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="icon security" style="top: 72%; right: 22%;">
+                <div class="doc-card">
+                    <svg viewBox="0 0 24 24" width="28" height="28">
+                        <path fill="#003755"
+                            d="M12,1L3,5v6c0,5.55 3.84,10.74 9,12c5.16-1.26 9-6.45 9-12V5L12,1z M12,11.99h7c-0.53,4.12-3.28,7.79-7,9.15v-9.15H5V6.3l7-3.11V11.99z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="icon certified" style="top: 85%; right: 8%;">
+                <div class="doc-card">
+                    <svg viewBox="0 0 24 24" width="28" height="28">
+                        <path fill="#00ADEF" d="M12,2L4.5,20.29L5.21,21L12,18L18.79,21L19.5,20.29L12,2Z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="container hero-content">
+            <h1>Take full control over your Documents and Data</h1>
+            <p>Enterprise-grade encrypted e-signatures with decentralized storage—built for critical business documents.
+            </p>
+            <div class="hero-btns-v3">
+                <a href="#" class="btn-outline btn-large">Book a Demo</a>
+                <a href="#" class="btn-primary btn-large">Start a Free Trial</a>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C58,117.26,170.19,81.62,233.56,66.82,267,59.18,284.15,58.8,321.39,56.44Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <section class="privacy-section reveal">
+        <div class="container privacy-grid">
+            <div class="privacy-visual">
+                <div class="orbit-container">
+                    <div class="center-logo">
+                        <div class="logo-circle">B</div>
+                    </div>
+                    <div class="orbit-circle orbit-1">
+                        <div class="orbiting-icon icon-pdf">📄</div>
+                        <div class="orbiting-icon icon-graph">📊</div>
+                    </div>
+                    <div class="orbit-circle orbit-2">
+                        <div class="orbiting-icon icon-doc">📝</div>
+                        <div class="orbiting-icon icon-shield">🛡️</div>
+                        <div class="orbiting-icon icon-lock">🔒</div>
+                    </div>
+                    <div class="orbit-circle orbit-3">
+                        <div class="orbiting-icon icon-cloud">☁️</div>
+                        <div class="orbiting-icon icon-sign">✍️</div>
+                        <div class="orbiting-icon icon-folder">📂</div>
+                        <div class="orbiting-icon icon-excel">📗</div>
+                    </div>
+                </div>
+            </div>
+            <div class="privacy-text">
+                <h2>Enterprise excellence. <span>Secure privacy.</span></h2>
+                <p>We're here to provide a reliable, secure digital signature platform that puts your privacy first. As
+                    an enterprise-grade solution, we follow the world's strictest data protection standards.</p>
+                <p>And our multi-layer encryption ensures your documents are always secure. No compromises. No tracking.
+                    No third-party access.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section reveal">
+        <div class="container">
+            <div class="stats-header">
+                <h2>Take control. <span>It's your documents.</span></h2>
+                <p>You choose where your files live: <strong>Europe</strong> or <strong>USA</strong>. Our ultra-secure
+                    data centers are certified and built for maximum protection.</p>
+            </div>
+
+            <div class="map-container">
+                <div class="world-map"></div>
+                <!-- Dots/Pins on the map are now siblings to avoid being affected by the map's filter -->
+                <div class="map-pin pin-us" style="top: 35%; left: 20%;">
+                    <div class="pin-badge">🇺🇸 DATA CENTER</div>
+                    <div class="pin-dot"></div>
+                </div>
+                <div class="map-pin pin-eu" style="top: 25%; left: 48%;">
+                    <div class="pin-badge">🇪🇺 DATA CENTER</div>
+                    <div class="pin-dot"></div>
+                </div>
+                <div class="map-pin pin-acc-1" style="top: 45%; left: 35%;">
+                    <div class="pin-badge">ACCELERATING SERVERS</div>
+                    <div class="pin-dot"></div>
+                </div>
+                <div class="map-pin pin-acc-2" style="top: 60%; left: 52%;">
+                    <div class="pin-badge">ACCELERATING SERVERS</div>
+                    <div class="pin-dot"></div>
+                </div>
+                <div class="map-pin pin-acc-3" style="top: 30%; left: 75%;">
+                    <div class="pin-badge">ACCELERATING SERVERS</div>
+                    <div class="pin-dot"></div>
+                </div>
+                <div class="map-pin pin-acc-4" style="top: 75%; left: 78%;">
+                    <div class="pin-badge">ACCELERATING SERVERS</div>
+                    <div class="pin-dot"></div>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number-wrapper">
+                        <h3 class="stat-number" data-target="5">0</h3><span class="stat-suffix">M+</span>
+                    </div>
+                    <p>Active Signers</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number-wrapper">
+                        <h3 class="stat-number" data-target="150">0</h3><span class="stat-suffix">+</span>
+                    </div>
+                    <p>Countries</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number-wrapper">
+                        <h3 class="stat-number" data-target="99.99" data-decimals="2">0</h3><span
+                            class="stat-suffix">%</span>
+                    </div>
+                    <p>Agreement Uptime</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number-wrapper">
+                        <h3 class="stat-number" data-target="10">0</h3><span class="stat-suffix">B+</span>
+                    </div>
+                    <p>Securely Signed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="management-section reveal">
+        <div class="container">
+            <div class="management-header">
+                <h2>Easy to manage? <span>For sure.</span></h2>
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" id="prevBtn">❮</button>
+                    <button class="carousel-btn next" id="nextBtn">❯</button>
+                </div>
+            </div>
+
+            <div class="management-carousel" id="carousel">
+                <div class="carousel-track">
+                    <div class="carousel-card active">
+                        <div class="card-content">
+                            <span class="card-category">ACCESS & FLEXIBILITY</span>
+                            <h3>Access from anywhere</h3>
+                            <p>On a laptop, phone, or tablet. From the city, beach, or the savanna.</p>
+                        </div>
+                        <div class="card-image">
+                            <img src="brillsign_access_anywhere_1769792518327.png" alt="BrillSign on multiple devices">
+                        </div>
+                    </div>
+
+                    <div class="carousel-card">
+                        <div class="card-content">
+                            <span class="card-category">SHARING & COLLABORATION</span>
+                            <h3>Send files instantly</h3>
+                            <p>Share files and folders with anyone — fast, easy, and secure.</p>
+                        </div>
+                        <div class="card-image">
+                            <img src="brillsign_send_instantly_1769792536421.png" alt="BrillSign document sharing">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials-section reveal">
+        <div class="container">
+            <h2 class="testimonials-title">BrillSign is <span>getting attention</span></h2>
+
+            <div class="testimonials-container">
+                <button class="test-btn prev" id="testPrev">❮</button>
+
+                <div class="testimonials-slider">
+                    <div class="test-track" id="testTrack">
+                        <div class="test-slide active">
+                            <blockquote class="test-quote">
+                                "BrillSign is a great value secure signature service with a fantastic team plan and the
+                                kind of security integration that few of its rivals can match."
+                            </blockquote>
+                            <div class="test-brand">
+                                <img src="press_logos.png" alt="TechRadar" class="press-logo techradar">
+                            </div>
+                            <a href="#" class="read-more">Read more ›</a>
+                        </div>
+
+                        <div class="test-slide">
+                            <blockquote class="test-quote">
+                                "The most intuitive document management platform we've ever tested. BrillSign sets a new
+                                standard for enterprise privacy and speed."
+                            </blockquote>
+                            <div class="test-brand">
+                                <img src="press_logos.png" alt="Forbes" class="press-logo forbes">
+                            </div>
+                            <a href="#" class="read-more">Read more ›</a>
+                        </div>
+
+                        <div class="test-slide">
+                            <blockquote class="test-quote">
+                                "Security-conscious businesses should look no further. BrillSign's multi-layer
+                                encryption is top-tier."
+                            </blockquote>
+                            <div class="test-brand">
+                                <img src="press_logos.png" alt="PCMag" class="press-logo pcmag">
+                            </div>
+                            <a href="#" class="read-more">Read more ›</a>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="test-btn next" id="testNext">❯</button>
+            </div>
+
+            <div class="test-dots" id="testDots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <section class="scenarios-section">
+        <div class="scenarios-sticky-wrapper" id="scenarioWrapper">
+            <div class="scenario-bg-overlay"></div>
+
+            <div class="sticky-content">
+                <div class="container">
+                    <div class="scenario-header">
+                        <h2>Still wondering if BrillSign is for you?</h2>
+                        <div class="scenario-tabs" id="scenarioTabs">
+                            <div class="tab active" data-index="0">Legal</div>
+                            <div class="tab" data-index="1">Real Estate</div>
+                            <div class="tab" data-index="2">Tech & Soft</div>
+                            <div class="tab" data-index="3">Enterprise</div>
+                        </div>
+                    </div>
+
+                    <div class="scenario-visual-container">
+                        <div class="scenario-visual-track" id="scenarioVisuals">
+                            <div class="scenario-slide active" id="slide-0">
+                                <p class="scenario-caption">Close deals faster with secure, legally-binding signatures
+                                    for every contract.</p>
+                                <div class="mockup-frame">
+                                    <img src="scenario_legal.png" alt="Legal Scenario">
+                                </div>
+                            </div>
+                            <div class="scenario-slide" id="slide-1">
+                                <p class="scenario-caption">Seamless property agreements for agents and clients,
+                                    anywhere they are.</p>
+                                <div class="mockup-frame">
+                                    <img src="scenario_realestate.png" alt="Real Estate Scenario">
+                                </div>
+                            </div>
+                            <div class="scenario-slide" id="slide-2">
+                                <p class="scenario-caption">Deploy document workflows at scale with our
+                                    developer-friendly API.</p>
+                                <div class="mockup-frame">
+                                    <img src="brillsign_access_anywhere_1769792518327.png" alt="Tech Scenario">
+                                </div>
+                            </div>
+                            <div class="scenario-slide" id="slide-3">
+                                <p class="scenario-caption">Global collaboration made simple with multi-layer encryption
+                                    and tracking.</p>
+                                <div class="mockup-frame">
+                                    <img src="brillsign_send_instantly_1769792536421.png" alt="Enterprise Scenario">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="user-testimonials" class="user-testimonials-v2 reveal">
+        <div class="container">
+            <div class="testimonial-v2-header">
+                <h2>Why listen to us? <span class="highlight-purple">Listen to them.</span></h2>
+                <div class="testimonial-v2-nav">
+                    <button class="nav-btn prev" id="prevTestimonialV2">
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="currentColor" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                        </svg>
+                    </button>
+                    <button class="nav-btn next" id="nextTestimonialV2">
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="currentColor" d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="testimonial-v2-track-wrapper">
+                <div class="testimonial-v2-track" id="testimonialV2Track">
+                    <!-- Testimonial Card 1 -->
+                    <div class="testimonial-v2-card">
+                        <div class="quote-icon">
+                            <svg viewBox="0 0 24 24" width="40" height="40">
+                                <path fill="url(#grad1)"
+                                    d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C14.9124 8 14.017 7.10457 14.017 6V3H21.017V15C21.017 18.3137 18.3307 21 15.017 21H14.017ZM3 21L3 18C3 16.8954 3.89543 16 5 16H8C8.55228 16 9 15.5523 9 15V9C9 8.44772 8.55228 8 8 8H5C3.89543 8 3 7.10457 3 6V3H10V15C10 18.3137 7.31371 21 4 21H3Z" />
+                            </svg>
+                        </div>
+                        <h3>Yasmina E.</h3>
+                        <p class="role">Administrative and accounting assistant</p>
+                        <p class="text">Best tool for save and share documents securely. BrillSign has transformed our
+                            workflow.</p>
+                    </div>
+                    <!-- Testimonial Card 2 -->
+                    <div class="testimonial-v2-card">
+                        <div class="quote-icon">
+                            <svg viewBox="0 0 24 24" width="40" height="40">
+                                <path fill="url(#grad1)"
+                                    d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C14.9124 8 14.017 7.10457 14.017 6V3H21.017V15C21.017 18.3137 18.3307 21 15.017 21H14.017ZM3 21L3 18C3 16.8954 3.89543 16 5 16H8C8.55228 16 9 15.5523 9 15V9C9 8.44772 8.55228 8 8 8H5C3.89543 8 3 7.10457 3 6V3H10V15C10 18.3137 7.31371 21 4 21H3Z" />
+                            </svg>
+                        </div>
+                        <h3>Nelkis V.</h3>
+                        <p class="role">Administrative assistant</p>
+                        <p class="text">Security and encryption, speed, and excellent price. That is BrillSign. Highly
+                            recommended.</p>
+                    </div>
+                    <!-- Testimonial Card 3 -->
+                    <div class="testimonial-v2-card">
+                        <div class="quote-icon">
+                            <svg viewBox="0 0 24 24" width="40" height="40">
+                                <path fill="url(#grad1)"
+                                    d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C14.9124 8 14.017 7.10457 14.017 6V3H21.017V15C21.017 18.3137 18.3307 21 15.017 21H14.017ZM3 21L3 18C3 16.8954 3.89543 16 5 16H8C8.55228 16 9 15.5523 9 15V9C9 8.44772 8.55228 8 8 8H5C3.89543 8 3 7.10457 3 6V3H10V15C10 18.3137 7.31371 21 4 21H3Z" />
+                            </svg>
+                        </div>
+                        <h3>Vince C.</h3>
+                        <p class="role">Small business owner</p>
+                        <p class="text">BrillSign is a better alternative to traditional paper signing. Saves me hours
+                            every week.</p>
+                    </div>
+                    <!-- Testimonial Card 4 -->
+                    <div class="testimonial-v2-card">
+                        <div class="quote-icon">
+                            <svg viewBox="0 0 24 24" width="40" height="40">
+                                <path fill="url(#grad1)"
+                                    d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C14.9124 8 14.017 7.10457 14.017 6V3H21.017V15C21.017 18.3137 18.3307 21 15.017 21H14.017ZM3 21L3 18C3 16.8954 3.89543 16 5 16H8C8.55228 16 9 15.5523 9 15V9C9 8.44772 8.55228 8 8 8H5C3.89543 8 3 7.10457 3 6V3H10V15C10 18.3137 7.31371 21 4 21H3Z" />
+                            </svg>
+                        </div>
+                        <h3>Ana A.</h3>
+                        <p class="role">Business finance</p>
+                        <p class="text">This tool is essential for my daily tasks. Securely handles all my high-stakes
+                            contracts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SVG Gradient for Quote Icons -->
+        <svg style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
+            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#00ADEF;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#8A2BE2;stop-opacity:1" />
+            </linearGradient>
+        </svg>
+    </section>
+
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-newsletter">
+                <div class="newsletter-content">
+                    <h3>Stay updated with BrillSign</h3>
+                    <p>Get the latest news, features, and security updates directly in your inbox.</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn-primary">Subscribe</button>
+                </form>
+            </div>
+
+            <div class="footer-grid">
+                <div class="footer-col branding">
+                    <a href="#" class="logo">
+                        <div class="logo-icon">
+                            <svg width="24" height="24" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="32" height="32" rx="8" fill="#003755" />
+                                <path d="M10 10H22M10 16H18M10 22H22" stroke="white" stroke-width="2.5"
+                                    stroke-linecap="round" />
+                                <path d="M22 17L25 20L28 17" stroke="#00ADEF" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <circle cx="21" cy="11" r="3" fill="#00ADEF" />
+                            </svg>
+                        </div>
+                        <div class="logo-text">Brill<span>Sign</span></div>
+                    </a>
+                    <p>The most secure and easy-to-use digital signature platform for individuals and teams worldwide.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" width="20" height="20">
+                                <path fill="currentColor"
+                                    d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" width="20" height="20">
+                                <path fill="currentColor"
+                                    d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.48.75 2.78 1.9 3.55-.7 0-1.35-.2-1.94-.53v.05c0 2.05 1.47 3.75 3.39 4.14-.36.1-.74.15-1.13.15-.28 0-.55-.03-.81-.08.54 1.68 2.1 2.9 3.95 2.93-1.45 1.13-3.27 1.81-5.25 1.81-.34 0-.68-.02-1.02-.06C3.07 20.39 5.25 21 7.58 21 15.15 21 19.28 14.74 19.28 9.3c0-.18 0-.36-.01-.53.8-.59 1.49-1.32 2.04-2.15z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" width="20" height="20">
+                                <path fill="currentColor"
+                                    d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C18.34 21.21 22 17.06 22 12.06C22 6.53 17.5 2.04 12 2.04Z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Security</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">API Documentation</a></li>
+                        <li><a href="#">Integrations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                        <li><a href="#">Trust Center</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Legal Knowledge Base</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get the App</h4>
+                    <p>Manage documents on the go.</p>
+                    <div class="app-buttons">
+                        <a href="#" class="app-btn">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+                                alt="App Store">
+                        </a>
+                        <a href="#" class="app-btn">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                                alt="Google Play">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookies</a>
+                </div>
+                <p>&copy; 2026 BrillSign. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="animations.js"></script>
+</body>
+
+</html>
