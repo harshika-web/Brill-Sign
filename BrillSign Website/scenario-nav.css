@@ -1,0 +1,95 @@
+/* Scenario Navigation Arrows */
+.scenario-visual-container {
+    position: relative;
+}
+
+.scenario-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 55, 85, 0.1);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.scenario-nav-btn:hover {
+    background: var(--primary-blue);
+    color: white;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 173, 239, 0.3);
+}
+
+.scenario-nav-btn svg {
+    stroke: currentColor;
+}
+
+.scenario-prev {
+    left: 20px;
+}
+
+.scenario-next {
+    right: 20px;
+}
+
+.scenario-nav-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .scenario-nav-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .scenario-prev {
+        left: 10px;
+    }
+
+    .scenario-next {
+        right: 10px;
+    }
+}
+
+/* Sliding Tab Marker */
+.scenario-tabs {
+    position: relative;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.nav-marker {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    height: 3px;
+    background-color: var(--primary-blue);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* Content Transitions */
+.scenario-slide {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    display: none;
+    /* Hidden by default */
+}
+
+.scenario-slide.active {
+    opacity: 1;
+    transform: translateY(0);
+    display: flex;
+    /* or block, depending on layout */
+}
