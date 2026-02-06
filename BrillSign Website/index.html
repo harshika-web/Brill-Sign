@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Digital Signatures</title>
+    <meta name="description"
+        content="The most secure digital signature platform. Sign, track, and manage your documents with ease.">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-spacer"></div>
+            <ul class="nav-links">
+                <li><a href="#features" data-i18n="nav_features">Features</a></li>
+                <li><a href="#solutions" data-i18n="nav_solutions">Solutions</a></li>
+                <li><a href="#apis" data-i18n="nav_apis">APIs & Integrations</a></li>
+                <li><a href="#resources" data-i18n="nav_resources">Resources</a></li>
+                <li><a href="#company" data-i18n="nav_company">Company</a></li>
+                <li><a href="#pricing" data-i18n="nav_pricing">Pricing</a></li>
+            </ul>
+            <div class="nav-btns">
+                <button class="theme-btn" id="theme-toggle">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <div class="lang-selector">
+                    <button class="lang-btn" aria-label="Select Language">
+                        <i class="fas fa-globe"></i>
+                        <span class="current-lang">EN</span>
+                    </button>
+                    <div class="lang-dropdown">
+                        <div class="lang-option active" data-lang="en">
+                            <span>English</span>
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="lang-option" data-lang="es">
+                            <span>Español</span>
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="lang-option" data-lang="hi">
+                            <span>हिन्दी</span>
+                            <i class="fas fa-check"></i>
+                        </div>
+                    </div>
+                </div>
+                <a href="#demo" class="btn-primary-v3">Join the Waitlist</a>
+            </div>
+            <!-- <button class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button> -->
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-sticky-wrapper">
+            <div class="hero-bg-layers">
+                <div class="hero-grain"></div>
+            </div>
+            <div class="hero-circuit-bg">
+                <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+                    <!-- Top-Left Blue -->
+                    <path class="step-line blue" d="M 0 120 h 140 v 120 h 100" />
+
+                    <!-- Top-Right Purple -->
+                    <path class="step-line purple delay-1" d="M 1440 100 h -160 v 140 h -120" />
+
+                    <!-- Center-Left Purple -->
+                    <path class="step-line purple delay-2" d="M 0 450 h 100 v 180 h 160" />
+
+                    <!-- Center-Right Blue -->
+                    <path class="step-line blue" d="M 1440 550 h -180 v -150 h -200" />
+
+                    <!-- Bottom-Left Blue -->
+                    <path class="step-line blue delay-1" d="M 0 800 h 220 v -120 h 180" />
+
+                    <!-- Bottom-Right Purple -->
+                    <path class="step-line purple delay-2" d="M 1440 780 h -200 v 80 h -250" />
+                </svg>
+            </div>
+            <div class="floating-icons" id="floating-icons">
+                <!-- Icon 1: Immutable Audit Trail -->
+                <div class="icon audit-trail" style="top: 25%; left: 8%;" data-icon-id="audit-trail">
+                    <div class="doc-card elite-card">
+                        <svg class="elite-icon-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Document with Fold -->
+                            <path d="M20 14 H38 L46 22 V50 H20 V14 Z" class="elite-glow-cyan" fill="rgba(0,173,239,0.1)"
+                                stroke="#00ADEF" stroke-width="1.5" />
+                            <path d="M38 14 V22 H46" stroke="#00ADEF" stroke-width="1.5" />
+
+                            <!-- Chain/Trail elements -->
+                            <circle cx="28" cy="24" r="2" fill="#8E2DE2" />
+                            <circle cx="28" cy="32" r="2" fill="#8E2DE2" />
+                            <circle cx="28" cy="40" r="2" fill="#8E2DE2" />
+                            <line x1="28" y1="24" x2="28" y2="40" stroke="#8E2DE2" stroke-width="1" opacity="0.5" />
+
+                            <!-- Verified Badge overlay -->
+                            <circle cx="46" cy="46" r="8" class="elite-glow-purple" fill="#0b0f19" stroke="#8E2DE2"
+                                stroke-width="1.5" />
+                            <path d="M42 46 L45 49 L50 43" stroke="#00ADEF" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Icon 2: Cryptographic Signature -->
+                <div class="icon crypto-sig" style="top: 12%; right: 10%;" data-icon-id="crypto-sig">
+                    <div class="doc-card elite-card">
+                        <svg class="elite-icon-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Digital Pen Nib -->
+                            <path d="M44 12 L52 20 L32 40 L28 42 L26 38 L44 12 Z" fill="rgba(142,45,226,0.1)"
+                                stroke="#8E2DE2" stroke-width="1.5" />
+                            <path d="M28 42 L24 46" stroke="#8E2DE2" stroke-width="1.5" />
+
+                            <!-- Cryptographic Curve/Sig -->
+                            <path d="M14 50 C14 50 20 44 26 48 C32 52 36 44 42 46 C48 48 50 42 50 42" stroke="#00ADEF"
+                                stroke-width="2" stroke-linecap="round" class="elite-glow-cyan" />
+
+                            <!-- Key/Lock symbol integrated -->
+                            <circle cx="48" cy="26" r="3" fill="#0b0f19" stroke="#00ADEF" stroke-width="1.5" />
+                            <path d="M48 29 V31" stroke="#00ADEF" />
+                            <rect x="45" y="31" width="6" height="5" fill="rgba(0,173,239,0.3)" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Icon 3: Verifiable Identity -->
+                <div class="icon verify-id" style="top: 70%; left: 10%;" data-icon-id="verify-id">
+                    <div class="doc-card elite-card">
+                        <svg class="elite-icon-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Biometric Fingerprint -->
+                            <path d="M32 50 V46" stroke="#00ADEF" stroke-width="2" stroke-linecap="round" />
+                            <path d="M32 40 V36" stroke="#00ADEF" stroke-width="2" stroke-linecap="round" />
+                            <path d="M24 38 C24 28 40 28 40 38" stroke="#8E2DE2" stroke-width="1.5"
+                                stroke-linecap="round" />
+                            <path d="M20 34 C20 22 44 22 44 34" stroke="#8E2DE2" stroke-width="1.5"
+                                stroke-linecap="round" />
+                            <path d="M16 30 C16 14 48 14 48 30" stroke="#00ADEF" stroke-width="1.5"
+                                stroke-linecap="round" class="elite-glow-cyan" />
+
+                            <!-- Checkmark/Verify Badge -->
+                            <circle cx="48" cy="46" r="8" fill="#0b0f19" stroke="#8E2DE2" stroke-width="1.5"
+                                class="elite-glow-purple" />
+                            <path d="M44 46 L47 49 L52 43" stroke="#00ADEF" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Icon 4: No Behavioral Tracking -->
+                <div class="icon no-tracking" style="top: 75%; right: 12%;" data-icon-id="no-tracking">
+                    <div class="doc-card elite-card">
+                        <svg class="elite-icon-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Eye with Slash (High Visibility) -->
+                            <path
+                                d="M16 32 C16 32 24 20 32 20 C40 20 48 32 48 32 C48 32 40 44 32 44 C24 44 16 32 16 32 Z"
+                                stroke="#8E2DE2" stroke-width="2" fill="rgba(142,45,226,0.1)"
+                                class="elite-glow-purple" />
+                            <circle cx="32" cy="32" r="4" fill="#8E2DE2" />
+                            <path d="M12 48 L52 16" stroke="#00ADEF" stroke-width="3" stroke-linecap="round"
+                                class="elite-glow-cyan" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Icon 5: Zero Data Monetization -->
+                <div class="icon zero-monetization" style="top: 42%; left: 10%;" data-icon-id="zero-monetization">
+                    <div class="doc-card elite-card">
+                        <svg class="elite-icon-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Database/Server Stack -->
+                            <path
+                                d="M44 40 C44 42.2 38.6 44 32 44 C25.4 44 20 42.2 20 40 V24 C20 21.8 25.4 20 32 20 C38.6 20 44 21.8 44 24 V40 Z"
+                                fill="rgba(0,173,239,0.1)" stroke="#00ADEF" stroke-width="1.5" />
+                            <path d="M20 32 C20 34.2 25.4 36 32 36 C38.6 36 44 34.2 44 32" stroke="#00ADEF"
+                                stroke-width="1.5" />
+
+                            <!-- Coin with Slash Badge -->
+                            <circle cx="46" cy="46" r="10" fill="#0b0f19" stroke="#8E2DE2" stroke-width="1.5"
+                                class="elite-glow-purple" />
+                            <path d="M46 42 V50 M44 44 H48 L44 48 H48" stroke="#8E2DE2" stroke-width="1.5" />
+                            <path d="M40 52 L52 40" stroke="#00ADEF" stroke-width="2" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Icon 6: Vendor-Neutral Infrastructure -->
+                <div class="icon vendor-neutral" style="top: 45%; right: 8%;" data-icon-id="vendor-neutral">
+                    <div class="doc-card elite-card">
+                        <svg class="elite-icon-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Platform Base -->
+                            <path d="M12 48 L32 56 L52 48 L32 40 L12 48 Z" fill="rgba(0,173,239,0.1)" stroke="#00ADEF"
+                                stroke-width="1.5" class="elite-glow-cyan" />
+
+                            <!-- Diverse Shapes on Platform (representing neutrality) -->
+                            <!-- Cube -->
+                            <rect x="18" y="24" width="12" height="12" stroke="#8E2DE2" stroke-width="1.5"
+                                fill="rgba(142,45,226,0.1)" />
+                            <path d="M18 24 L24 18 L36 18 L30 24" stroke="#8E2DE2" stroke-width="1" opacity="0.7" />
+                            <path d="M30 24 V36 L36 30 V18" stroke="#8E2DE2" stroke-width="1" opacity="0.7" />
+
+                            <!-- Sphere/Circle -->
+                            <circle cx="44" cy="28" r="6" stroke="#00ADEF" stroke-width="1.5" />
+
+                            <!-- Pyramid/Triangle -->
+                            <path d="M32 16 L26 34 H38 L32 16 Z" fill="rgba(255,255,255,0.05)" stroke="#00ADEF"
+                                stroke-width="1.5" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Icon 7: Surveillance-Free Signing -->
+                <div class="icon surveillance-free" style="top: 12%; left: 12%;" data-icon-id="surveillance-free">
+                    <div class="doc-card elite-card">
+                        <svg class="elite-icon-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Shield and Document -->
+                            <path d="M32 54 C32 54 48 44 48 28 V16 L32 10 L16 16 V28 C16 44 32 54 32 54 Z"
+                                class="elite-glow-cyan" fill="rgba(0,173,239,0.05)" />
+                            <path d="M26 32 C26 28 38 28 38 32" stroke="#8E2DE2" stroke-width="2" />
+                            <rect x="28" y="32" width="8" height="6" class="elite-glow-purple" fill="#8E2DE2" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Icon 8: User-Owned Metadata -->
+                <div class="icon user-metadata" style="top: 52%; left: 2%;" data-icon-id="user-metadata">
+                    <div class="doc-card elite-card">
+                        <svg class="elite-icon-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Hand Holding Data -->
+                            <path d="M22 46 Q32 54 42 46" stroke="#8E2DE2" stroke-width="1.5" fill="none" />
+
+                            <!-- Data Cube Floating -->
+                            <path d="M32 18 L42 24 V36 L32 42 L22 36 V24 L32 18 Z" class="elite-glow-cyan"
+                                fill="rgba(0,173,239,0.1)" stroke="#00ADEF" />
+                            <path d="M22 24 L32 30 L42 24" stroke="#00ADEF" opacity="0.5" />
+                            <path d="M32 30 V42" stroke="#00ADEF" opacity="0.5" />
+
+                            <!-- Ownership Halo -->
+                            <ellipse cx="32" cy="14" rx="6" ry="2" stroke="#8E2DE2" stroke-width="1" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Icon 9: Decentralized Storage Encryption -->
+                <div class="icon decentralized-enc" style="top: 25%; right: 5%;" data-icon-id="decentralized-enc">
+                    <div class="doc-card elite-card">
+                        <svg class="elite-icon-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Nodes + Lock -->
+                            <circle cx="20" cy="20" r="4" fill="#00ADEF" opacity="0.5" />
+                            <circle cx="44" cy="20" r="4" fill="#00ADEF" opacity="0.5" />
+                            <circle cx="32" cy="40" r="4" fill="#00ADEF" opacity="0.5" />
+                            <path d="M20 20 L32 40 L44 20" stroke="#00ADEF" stroke-width="1" />
+                            <rect x="26" y="24" width="12" height="10" rx="2" class="elite-glow-purple"
+                                fill="#0b0f19" />
+                            <path d="M29 24 V22 C29 20 35 20 35 22 V24" stroke="#8E2DE2" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="container hero-content">
+                <h1><span data-i18n="hero_title">Take full control over your</span><br><span class="hero-gradient-text"
+                        data-i18n="hero_highlight">Documents & Data</span></h1>
+                <p data-i18n="hero_subtitle">Enterprise-grade encrypted e-signatures with decentralized storage, built
+                    for
+                    critical business documents.
+                </p>
+                <div class="hero-cta-elite">
+                    <a href="#demo" class="cta-link primary" data-i18n="btn_start">
+                        Book a Demo
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="#trial" class="cta-link secondary" data-i18n="btn_docs">
+                        Start a Free Trial
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="integrations-grid hero-grid">
+            <!-- 1. Immutable Audit Trail -->
+            <div class="int-card elite" data-target-id="audit-trail">
+                <div class="int-icon">
+                    <svg class="elite-icon-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Document with Fold -->
+                        <path d="M20 14 H38 L46 22 V50 H20 V14 Z" class="elite-glow-cyan" fill="rgba(0,173,239,0.1)"
+                            stroke="#00ADEF" stroke-width="1.5" />
+                        <path d="M38 14 V22 H46" stroke="#00ADEF" stroke-width="1.5" />
+
+                        <!-- Chain/Trail elements -->
+                        <circle cx="28" cy="24" r="2" fill="#8E2DE2" />
+                        <circle cx="28" cy="32" r="2" fill="#8E2DE2" />
+                        <circle cx="28" cy="40" r="2" fill="#8E2DE2" />
+                        <line x1="28" y1="24" x2="28" y2="40" stroke="#8E2DE2" stroke-width="1" opacity="0.5" />
+
+                        <!-- Verified Badge overlay -->
+                        <circle cx="46" cy="46" r="8" class="elite-glow-purple" fill="#0b0f19" stroke="#8E2DE2"
+                            stroke-width="1.5" />
+                        <path d="M42 46 L45 49 L50 43" stroke="#00ADEF" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <span class="int-name">Immutable Audit Trail</span>
+            </div>
+            <!-- 2. Cryptographic Signature -->
+            <div class="int-card elite" data-target-id="crypto-sig">
+                <div class="int-icon">
+                    <svg class="elite-icon-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Digital Pen Nib -->
+                        <path d="M44 12 L52 20 L32 40 L28 42 L26 38 L44 12 Z" fill="rgba(142,45,226,0.1)"
+                            stroke="#8E2DE2" stroke-width="1.5" />
+                        <path d="M28 42 L24 46" stroke="#8E2DE2" stroke-width="1.5" />
+
+                        <!-- Cryptographic Curve/Sig -->
+                        <path d="M14 50 C14 50 20 44 26 48 C32 52 36 44 42 46 C48 48 50 42 50 42" stroke="#00ADEF"
+                            stroke-width="2" stroke-linecap="round" class="elite-glow-cyan" />
+
+                        <!-- Key/Lock symbol integrated -->
+                        <circle cx="48" cy="26" r="3" fill="#0b0f19" stroke="#00ADEF" stroke-width="1.5" />
+                        <path d="M48 29 V31" stroke="#00ADEF" />
+                        <rect x="45" y="31" width="6" height="5" fill="rgba(0,173,239,0.3)" />
+                    </svg>
+                </div>
+                <span class="int-name">Cryptographic Signature</span>
+            </div>
+            <!-- 3. Verifiable Identity -->
+            <div class="int-card elite" data-target-id="verify-id">
+                <div class="int-icon">
+                    <svg class="elite-icon-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Biometric Fingerprint -->
+                        <path d="M32 50 V46" stroke="#00ADEF" stroke-width="2" stroke-linecap="round" />
+                        <path d="M32 40 V36" stroke="#00ADEF" stroke-width="2" stroke-linecap="round" />
+                        <path d="M24 38 C24 28 40 28 40 38" stroke="#8E2DE2" stroke-width="1.5"
+                            stroke-linecap="round" />
+                        <path d="M20 34 C20 22 44 22 44 34" stroke="#8E2DE2" stroke-width="1.5"
+                            stroke-linecap="round" />
+                        <path d="M16 30 C16 14 48 14 48 30" stroke="#00ADEF" stroke-width="1.5" stroke-linecap="round"
+                            class="elite-glow-cyan" />
+
+                        <!-- Checkmark/Verify Badge -->
+                        <circle cx="48" cy="46" r="8" fill="#0b0f19" stroke="#8E2DE2" stroke-width="1.5"
+                            class="elite-glow-purple" />
+                        <path d="M44 46 L47 49 L52 43" stroke="#00ADEF" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <span class="int-name">Verifiable Identity</span>
+            </div>
+            <!-- 4. No Behavioral Tracking -->
+            <div class="int-card elite" data-target-id="no-tracking">
+                <div class="int-icon">
+                    <svg class="elite-icon-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Eye with Slash (Bright) -->
+                        <path d="M16 32 C16 32 24 20 32 20 C40 20 48 32 48 32 C48 32 40 44 32 44 C24 44 16 32 16 32 Z"
+                            stroke="#8E2DE2" stroke-width="2" fill="rgba(142,45,226,0.1)" class="elite-glow-purple" />
+                        <circle cx="32" cy="32" r="4" fill="#8E2DE2" />
+                        <path d="M12 48 L52 16" stroke="#00ADEF" stroke-width="3" stroke-linecap="round"
+                            class="elite-glow-cyan" />
+                    </svg>
+                </div>
+                <span class="int-name">No Behavioral Tracking</span>
+            </div>
+            <!-- 5. Zero Data Monetization -->
+            <div class="int-card elite" data-target-id="zero-monetization">
+                <div class="int-icon">
+                    <svg class="elite-icon-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Database/Server Stack -->
+                        <path
+                            d="M44 40 C44 42.2 38.6 44 32 44 C25.4 44 20 42.2 20 40 V24 C20 21.8 25.4 20 32 20 C38.6 20 44 21.8 44 24 V40 Z"
+                            fill="rgba(0,173,239,0.1)" stroke="#00ADEF" stroke-width="1.5" />
+                        <path d="M20 32 C20 34.2 25.4 36 32 36 C38.6 36 44 34.2 44 32" stroke="#00ADEF"
+                            stroke-width="1.5" />
+
+                        <!-- Coin with Slash Badge -->
+                        <circle cx="46" cy="46" r="10" fill="#0b0f19" stroke="#8E2DE2" stroke-width="1.5"
+                            class="elite-glow-purple" />
+                        <path d="M46 42 V50 M44 44 H48 L44 48 H48" stroke="#8E2DE2" stroke-width="1.5" />
+                        <path d="M40 52 L52 40" stroke="#00ADEF" stroke-width="2" />
+                    </svg>
+                </div>
+                <span class="int-name">Zero Data Monetization</span>
+            </div>
+
+
+            <!-- 6. Vendor-neutral Infrastructure -->
+            <div class="int-card elite" data-target-id="vendor-neutral">
+                <div class="int-icon">
+                    <svg class="elite-icon-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Platform Base -->
+                        <path d="M12 48 L32 56 L52 48 L32 40 L12 48 Z" fill="rgba(0,173,239,0.1)" stroke="#00ADEF"
+                            stroke-width="1.5" class="elite-glow-cyan" />
+
+                        <!-- Diverse Shapes on Platform -->
+                        <rect x="18" y="24" width="12" height="12" stroke="#8E2DE2" stroke-width="1.5"
+                            fill="rgba(142,45,226,0.1)" /> <!-- Cube -->
+                        <path d="M18 24 L24 18 L36 18 L30 24" stroke="#8E2DE2" stroke-width="1" opacity="0.7" />
+                        <circle cx="44" cy="28" r="6" stroke="#00ADEF" stroke-width="1.5" /> <!-- Sphere -->
+                        <path d="M32 16 L26 34 H38 L32 16 Z" fill="rgba(255,255,255,0.05)" stroke="#00ADEF"
+                            stroke-width="1.5" /> <!-- Pyramid -->
+                    </svg>
+                </div>
+                <span class="int-name">Vendor-neutral Infra</span>
+            </div>
+            <!-- 7. Surveillance-free Signing -->
+            <div class="int-card elite" data-target-id="surveillance-free">
+                <div class="int-icon">
+                    <svg class="elite-icon-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M32 54 C32 54 48 44 48 28 V16 L32 10 L16 16 V28 C16 44 32 54 32 54 Z"
+                            class="elite-glow-cyan" fill="rgba(0,173,239,0.05)" />
+                        <path d="M26 32 C26 28 38 28 38 32" stroke="#8E2DE2" stroke-width="2" />
+                        <rect x="28" y="32" width="8" height="6" class="elite-glow-purple" fill="#8E2DE2" />
+                    </svg>
+                </div>
+                <span class="int-name">Surveillance-free Signing</span>
+            </div>
+            <!-- 8. User-owned Metadata -->
+            <div class="int-card elite" data-target-id="user-metadata">
+                <div class="int-icon">
+                    <svg class="elite-icon-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Hand Holding Data -->
+                        <path d="M22 46 Q32 54 42 46" stroke="#8E2DE2" stroke-width="1.5" fill="none" />
+                        <path d="M32 18 L42 24 V36 L32 42 L22 36 V24 L32 18 Z" class="elite-glow-cyan"
+                            fill="rgba(0,173,239,0.1)" stroke="#00ADEF" />
+                        <path d="M22 24 L32 30 L42 24" stroke="#00ADEF" opacity="0.5" />
+                        <path d="M32 30 V42" stroke="#00ADEF" opacity="0.5" />
+                        <ellipse cx="32" cy="14" rx="6" ry="2" stroke="#8E2DE2" stroke-width="1" />
+                    </svg>
+                </div>
+                <span class="int-name">User-owned Metadata</span>
+            </div>
+            <!-- 9. Decentralized Storage Encryption -->
+            <div class="int-card elite" data-target-id="decentralized-enc">
+                <div class="int-icon">
+                    <svg class="elite-icon-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Nodes + Lock -->
+                        <circle cx="20" cy="20" r="4" fill="#00ADEF" opacity="0.5" />
+                        <circle cx="44" cy="20" r="4" fill="#00ADEF" opacity="0.5" />
+                        <circle cx="32" cy="40" r="4" fill="#00ADEF" opacity="0.5" />
+                        <path d="M20 20 L32 40 L44 20" stroke="#00ADEF" stroke-width="1" />
+                        <rect x="26" y="24" width="12" height="10" rx="2" class="elite-glow-purple" fill="#0b0f19" />
+                        <path d="M29 24 V22 C29 20 35 20 35 22 V24" stroke="#8E2DE2" />
+                    </svg>
+                </div>
+                <span class="int-name">Decentralized Storage</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="strategic-section">
+        <div class="hero-bg-layers">
+            <div class="hero-grain"></div>
+        </div>
+        <div class="strategic-left-glow"></div>
+        <!-- Semicircular Orbits at the edge - ENLARGED -->
+        <div class="edge-orbit-container expanded-orbit">
+            <div class="orbit-circle orbit-0"></div>
+            <div class="orbit-circle orbit-1">
+                <div class="orbit-node" style="top: 20%; left: 80%"></div>
+            </div>
+            <div class="orbit-circle orbit-2">
+                <div class="orbit-node" style="top: 50%; left: 0%"></div>
+                <div class="orbit-node" style="top: 30%; left: 95%"></div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="strategic_title">Why Encrypted eSign Is a <span>Strategic Asset</span></h2>
+                <p data-i18n="strategic_subtitle">Encrypted eSign determines who owns the contract when something goes
+                    wrong. eSign is built so that ownership stays with the enterprise, not the vendor</p>
+            </div>
+
+            <div class="strategic-dynamic-content">
+                <div class="strategic-cards-stack" id="strategicCardStack">
+                    <!-- Card 1: Integrity -->
+                    <div class="strategic-card active" data-index="0">
+                        <div class="strat-content">
+                            <h3 data-i18n="strategic_card_1_title">End-to-End Document Integrity</h3>
+                            <p data-i18n="strategic_card_1_text">Every document and signature is cryptographically
+                                sealed so
+                                any change whether intentional or accidental is immediately detectable.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Storage -->
+                    <div class="strategic-card" data-index="1">
+                        <div class="strat-content">
+                            <h3 data-i18n="strategic_card_2_title">Decentralized Document Storage</h3>
+                            <p data-i18n="strategic_card_2_text">By design, eSign distributes document storage to
+                                prevent
+                                single points of control, limiting operational, regulatory, and vendor-related risk for
+                                enterprises.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Non-Repudiation -->
+                    <div class="strategic-card" data-index="2">
+                        <div class="strat-content">
+                            <h3 data-i18n="strategic_card_3_title">Strong Non-Repudiation</h3>
+                            <p data-i18n="strategic_card_3_text">Signatures are bound to the signer, the document, and
+                                the
+                                moment of signing, creating proof that stands up in audits and disputes.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Identity -->
+                    <div class="strategic-card" data-index="3">
+                        <div class="strat-content">
+                            <h3 data-i18n="strategic_card_4_title">Sovereign Signer Identity Layer</h3>
+                            <p data-i18n="strategic_card_4_text">eSign establishes signer identity through decentralized
+                                identifiers, enabling proof of authority or eligibility without collecting or retaining
+                                excess personal data.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="strategic-visual-showcase" id="strategicVisualShowcase">
+                    <!-- Visual 1: Integrity Showcase (The Vault) -->
+                    <div class="visual-item active" data-index="0">
+                        <div class="hub-window">
+                            <div class="hub-sidebar">
+                                <div class="hub-sidebar-icon active"><i class="fas fa-shield-halved"></i></div>
+                                <div class="hub-sidebar-icon"><i class="fas fa-layer-group"></i></div>
+                                <div class="hub-sidebar-icon"><i class="fas fa-clock-rotate-left"></i></div>
+                            </div>
+                            <div class="hub-content">
+                                <div class="hub-tab">Document Integrity Vault</div>
+                                <div class="hub-list">
+                                    <div class="hub-item" style="--delay: 0.1s">
+                                        <div class="hub-item-icon" style="color: #00d2ff"><i
+                                                class="fas fa-file-invoice"></i></div>
+                                        <div class="hub-item-info">
+                                            <div class="hub-item-name">Corporate_Charter_Final.pdf</div>
+                                            <div class="hub-progress-bar">
+                                                <div class="hub-progress-fill" style="width: 100%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="hub-item-status status-sealed"><i class="fas fa-check"></i></div>
+                                    </div>
+                                    <div class="hub-item" style="--delay: 0.2s">
+                                        <div class="hub-item-icon" style="color: #00d2ff"><i
+                                                class="fas fa-file-signature"></i></div>
+                                        <div class="hub-item-info">
+                                            <div class="hub-item-name">Executive_Agreement_V2.pdf</div>
+                                            <div class="hub-progress-bar">
+                                                <div class="hub-progress-fill" style="width: 100%"></div>
+                                            </div>
+                                        </div>
+                                        <div class="hub-item-status status-sealed"><i class="fas fa-check"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hub-vault-container">
+                            <div class="vault-door">
+                                <div class="vault-wheel"><i class="fas fa-gear"></i></div>
+                                <div class="vault-status">LOCKED</div>
+                            </div>
+                            <div class="vault-scanner-light"></div>
+                        </div>
+                    </div>
+
+                    <!-- Visual 2: Storage Showcase (The Cluster) -->
+                    <div class="visual-item" data-index="1">
+                        <div class="hub-window">
+                            <div class="hub-sidebar">
+                                <div class="hub-sidebar-icon"><i class="fas fa-server"></i></div>
+                                <div class="hub-sidebar-icon active"><i class="fas fa-network-wired"></i></div>
+                                <div class="hub-sidebar-icon"><i class="fas fa-microchip"></i></div>
+                            </div>
+                            <div class="hub-content">
+                                <div class="hub-tab">Decentralized Node Cluster</div>
+                                <div class="hub-node-map">
+                                    <div class="hub-node"><i class="fas fa-satellite"></i></div>
+                                    <div class="hub-node-line" style="transform: rotate(30deg)"></div>
+                                    <div class="hub-node-line" style="transform: rotate(-30deg)"></div>
+                                    <div class="hub-item"
+                                        style="position: absolute; bottom: 0; width: 100%; --delay: 0.3s">
+                                        <div class="hub-item-icon" style="color: #a855f7"><i class="fas fa-server"></i>
+                                        </div>
+                                        <div class="hub-item-info">
+                                            <div class="hub-item-name">Primary Shard Cluster</div>
+                                            <div class="hub-item-date">Healthy • 12 Global Regions</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hub-mac-mockup">
+                            <div class="mac-header">
+                                <div class="mac-notch"></div>
+                                <div class="mac-controls"><span></span><span></span><span></span></div>
+                            </div>
+                            <div class="mac-screen-content">
+                                <div class="cloud-dashboard">
+                                    <div class="cloud-row">
+                                        <div class="cloud-box"><i class="fas fa-database"></i></div>
+                                        <div class="cloud-box"><i class="fas fa-server"></i></div>
+                                    </div>
+                                    <div class="cloud-loader"></div>
+                                </div>
+                            </div>
+                            <!-- Extra Environmental Elements -->
+                            <div class="floating-data-shard shard-1"></div>
+                            <div class="floating-data-shard shard-2"></div>
+                        </div>
+                    </div>
+
+                    <!-- Visual 3: Non-Repudiation Showcase (The Ledger) -->
+                    <div class="visual-item" data-index="2">
+                        <div class="hub-window">
+                            <div class="hub-sidebar">
+                                <div class="hub-sidebar-icon"><i class="fas fa-list-check"></i></div>
+                                <div class="hub-sidebar-icon active"><i class="fas fa-signature"></i></div>
+                            </div>
+                            <div class="hub-content">
+                                <div class="hub-tab">Immutable Trust Ledger</div>
+                                <div class="hub-ledger">
+                                    <div class="hub-ledger-step" style="--delay: 0.1s">
+                                        <div class="hub-item-name">Biometric Auth Verified</div>
+                                        <div class="hub-item-date">Signer Identity confirmed via DID</div>
+                                    </div>
+                                    <div class="hub-ledger-step" style="--delay: 0.2s">
+                                        <div class="hub-item-name">Cryptographic Anchor</div>
+                                        <div class="hub-item-date">Block Ref: #18,442,109</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hub-holo-crystal">
+                            <div class="crystal-core">
+                                <div class="crystal-face front"></div>
+                                <div class="crystal-face back"></div>
+                                <div class="crystal-face left"></div>
+                                <div class="crystal-face right"></div>
+                                <div class="crystal-face top"></div>
+                                <div class="crystal-face bottom"></div>
+                                <div class="crystal-data-stream"></div>
+                            </div>
+                            <div class="holo-base"></div>
+                        </div>
+                    </div>
+
+                    <!-- Visual 4: Identity Showcase (The Shield) -->
+                    <div class="visual-item" data-index="3">
+                        <div class="hub-window">
+                            <div class="hub-sidebar">
+                                <div class="hub-sidebar-icon active"><i class="fas fa-id-card"></i></div>
+                                <div class="hub-sidebar-icon"><i class="fas fa-fingerprint"></i></div>
+                            </div>
+                            <div class="hub-content">
+                                <div class="hub-tab">Self-Sovereign Identity</div>
+                                <div class="hub-id-grid">
+                                    <div class="hub-item" style="--delay: 0.1s">
+                                        <div class="hub-item-info">
+                                            <div class="hub-item-name">Sovereign DID Masking</div>
+                                            <div class="hub-item-date">Protects PII data from exposure</div>
+                                        </div>
+                                        <div class="hub-item-status status-verified"><i class="fas fa-toggle-on"></i>
+                                        </div>
+                                    </div>
+                                    <div class="hub-item" style="--delay: 0.2s">
+                                        <div class="hub-item-info">
+                                            <div class="hub-item-name">Zero-Knowledge Proof</div>
+                                            <div class="hub-item-date">Verifies age/status without identity</div>
+                                        </div>
+                                        <div class="hub-item-status status-verified"><i class="fas fa-toggle-on"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hub-phone-mockup">
+                            <div class="phone-screen">
+                                <div class="phone-status-dot"></div>
+                                <div class="phone-header">
+                                    <div class="phone-notch"></div>
+                                </div>
+                                <div class="phone-content phone-identity">
+                                    <div class="bio-auth-ui">
+                                        <div class="auth-ring"></div>
+                                        <div class="auth-finger"><i class="fas fa-fingerprint"></i></div>
+                                    </div>
+                                    <div class="auth-success-badge">VERIFIED</div>
+                                </div>
+                            </div>
+                            <!-- Projection outside phone -->
+                            <div class="holo-id-projection">
+                                <i class="fas fa-id-card"></i>
+                                <div class="scan-line"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="scenarios-section">
+        <div class="scenarios-sticky-wrapper" id="scenarioWrapper">
+
+            <div class="sticky-content">
+                <div class="scenario-bg-overlay"></div>
+                <div class="container">
+                    <div class="scenario-header">
+                        <h2>Operational Trust that extends <br>beyond the <span>Signing Moment</span></h2>
+                        <p class="scenario-subheader">Your documents don't stop mattering once they're signed. <br>With
+                            eSign, they remain verifiable and defensible over time.
+                        </p>
+                        <div class="scenario-tabs" id="scenarioTabs">
+                            <div class="tab active" data-index="0">Audit Trails</div>
+                            <div class="tab" data-index="1">Compliance</div>
+                            <div class="tab" data-index="2">Zero-Knowledge</div>
+                            <div class="tab" data-index="3">Jurisdiction</div>
+                            <div class="tab" data-index="4">Identity</div>
+                            <div class="tab" data-index="5">Exit-Safe</div>
+                            <div class="nav-marker"></div>
+                        </div>
+                    </div>
+
+                    <div class="scenario-visual-container">
+                        <div class="scenario-visual-track" id="scenarioVisuals">
+                            <div class="scenario-slide active" id="slide-0">
+                                <p class="scenario-caption">
+                                    <strong>Tamper-Proof Audit Trails</strong>
+                                    Every action taken on a document is locked in cryptographically. That means no
+                                    silent edits, no retroactive changes, and no uncertainty about the integrity of
+                                    your audit records when they're examined internally or externally.
+                                </p>
+                                <div class="mockup-frame">
+                                    <img src="scenario_audit_trails.png" alt="Digital Audit Dashboard">
+                                </div>
+                            </div>
+                            <div class="scenario-slide" id="slide-1">
+                                <p class="scenario-caption">
+                                    <strong>Compliance Built Into the Workflow</strong>
+                                    Instead of relying on teams to "do the right thing," compliance rules are
+                                    enforced automatically. Data residency, retention, and access controls are
+                                    applied as documents move through the workflow, reducing human error and
+                                    day-to-day compliance overhead.
+                                </p>
+                                <div class="mockup-frame">
+                                    <img src="scenario_compliance.png" alt="Corporate Compliance">
+                                </div>
+                            </div>
+                            <div class="scenario-slide" id="slide-2">
+                                <p class="scenario-caption">
+                                    <strong>Zero-Knowledge Data Handling</strong>
+                                    We're intentionally unable to read or analyze your documents, eliminating internal
+                                    exposure and insider-risk scenarios without depending on vendor trust.
+                                </p>
+                                <div class="mockup-frame">
+                                    <img src="scenario_zero_knowledge.png" alt="Secure Encryption">
+                                </div>
+                            </div>
+                            <div class="scenario-slide" id="slide-3">
+                                <p class="scenario-caption">
+                                    <strong>Jurisdiction-Aware Signing</strong>
+                                    As documents move across regions, signing flows adapt automatically to local
+                                    regulatory requirements. This helps you avoid cross-border compliance gaps
+                                    without slowing down transactions or routing everything through legal.
+                                </p>
+                                <div class="mockup-frame">
+                                    <img src="scenario_jurisdiction.png" alt="Global Jurisdiction Map">
+                                </div>
+                            </div>
+                            <div class="scenario-slide" id="slide-4">
+                                <p class="scenario-caption">
+                                    <strong>Privacy-Preserving Identity Verification</strong>
+                                    Signer identity is verified without tracking behavior or building user profiles.
+                                    You get strong assurance around who signed without introducing privacy risk or
+                                    long-term data liabilities.
+                                </p>
+                                <div class="mockup-frame">
+                                    <img src="scenario_identity.png" alt="Secure Identity Check">
+                                </div>
+                            </div>
+                            <div class="scenario-slide" id="slide-5">
+                                <p class="scenario-caption">
+                                    <strong>Exit-Safe Architecture</strong>
+                                    If your needs change in the future, your documents remain usable and
+                                    independently verifiable. You’re never forced into re-signing contracts or
+                                    maintaining a vendor relationship just to preserve legal validity.
+                                </p>
+                                <div class="mockup-frame">
+                                    <img src="scenario_exit_safe.png" alt="Secure Data Vault">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="user-testimonials-v2" id="testimonials">
+
+        <div class="container">
+            <div class="testimonials-v3-header">
+                <div class="header-left">
+                    <span class="test-badge" data-i18n="test_title">Experiences worth hearing from</span>
+                    <h2 data-i18n="test_highlight">eSign turns signatures into <span>defensible records</span>.</h2>
+                    <p data-i18n="test_subtitle">Every document remains verifiable, compliant, and ready for scrutiny
+                        when it matters most.</p>
+                </div>
+            </div>
+
+
+            <div class="testimonial-v2-track-wrapper">
+                <div class="testimonial-v2-track" id="testimonialV2Track">
+                    <!-- Testimonial Card 1 -->
+                    <div class="testimonial-v2-card">
+                        <div class="quote-icon">
+                            <svg viewBox="0 0 24 24" width="40" height="40">
+                                <path fill="currentColor"
+                                    d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C14.9124 8 14.017 7.10457 14.017 6V3H21.017V15C21.017 18.3137 18.3307 21 15.017 21H14.017ZM3 21L3 18C3 16.8954 3.89543 16 5 16H8C8.55228 16 9 15.5523 9 15V9C9 8.44772 8.55228 8 8 8H5C3.89543 8 3 7.10457 3 6V3H10V15C10 18.3137 7.31371 21 4 21H3Z" />
+                            </svg>
+                        </div>
+                        <h3 data-i18n="test_card_1_quote">"We stopped thinking about signatures as a workflow and
+                            started treating them as evidence."</h3>
+                        <p class="role">Chief Compliance Officer</p>
+                        <p class="text" data-i18n="test_card_1_text">BrillSign gave us confidence that every signed
+                            document would still hold up months or years later.</p>
+                    </div>
+                    <!-- Testimonial Card 2 -->
+                    <div class="testimonial-v2-card">
+                        <div class="quote-icon">
+                            <svg viewBox="0 0 24 24" width="40" height="40">
+                                <path fill="currentColor"
+                                    d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C14.9124 8 14.017 7.10457 14.017 6V3H21.017V15C21.017 18.3137 18.3307 21 15.017 21H14.017ZM3 21L3 18C3 16.8954 3.89543 16 5 16H8C8.55228 16 9 15.5523 9 15V9C9 8.44772 8.55228 8 8 8H5C3.89543 8 3 7.10457 3 6V3H10V15C10 18.3137 7.31371 21 4 21H3Z" />
+                            </svg>
+                        </div>
+                        <h3 data-i18n="test_card_2_quote">"Audit reviews went from reactive to routine."</h3>
+                        <p class="role">Legal Ops Manager</p>
+                        <p class="text" data-i18n="test_card_2_text">With immutable logs and enforced policies, our team
+                            no longer has to chase records during audits.</p>
+                    </div>
+                    <!-- Testimonial Card 3 -->
+                    <div class="testimonial-v2-card">
+                        <div class="quote-icon">
+                            <svg viewBox="0 0 24 24" width="40" height="40">
+                                <path fill="currentColor"
+                                    d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C14.9124 8 14.017 7.10457 14.017 6V3H21.017V15C21.017 18.3137 18.3307 21 15.017 21H14.017ZM3 21L3 18C3 16.8954 3.89543 16 5 16H8C8.55228 16 9 15.5523 9 15V9C9 8.44772 8.55228 8 8 8H5C3.89543 8 3 7.10457 3 6V3H10V15C10 18.3137 7.31371 21 4 21H3Z" />
+                            </svg>
+                        </div>
+                        <h3 data-i18n="test_card_3_quote">"The biggest value wasn’t speed, it was certainty."</h3>
+                        <p class="role">VP of Product</p>
+                        <p class="text" data-i18n="test_card_3_text">Knowing documents can’t be altered removed a class
+                            of legal risk we were previously accepting.</p>
+                    </div>
+                    <!-- Testimonial Card 4 -->
+                    <div class="testimonial-v2-card">
+                        <div class="quote-icon">
+                            <svg viewBox="0 0 24 24" width="40" height="40">
+                                <path fill="currentColor"
+                                    d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C14.9124 8 14.017 7.10457 14.017 6V3H21.017V15C21.017 18.3137 18.3307 21 15.017 21H14.017ZM3 21L3 18C3 16.8954 3.89543 16 5 16H8C8.55228 16 9 15.5523 9 15V9C9 8.44772 8.55228 8 8 8H5C3.89543 8 3 7.10457 3 6V3H10V15C10 18.3137 7.31371 21 4 21H3Z" />
+                            </svg>
+                        </div>
+                        <h3 data-i18n="test_card_4_quote">"We reduced vendor trust without increasing operational
+                            friction."</h3>
+                        <p class="role">Enterprise Architect</p>
+                        <p class="text" data-i18n="test_card_4_text">BrillSign let us keep control of keys and data
+                            while still supporting enterprise signing workflows.</p>
+                    </div>
+                    <!-- Testimonial Card 5 -->
+                    <div class="testimonial-v2-card">
+                        <div class="quote-icon">
+                            <svg viewBox="0 0 24 24" width="40" height="40">
+                                <path fill="currentColor"
+                                    d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C14.9124 8 14.017 7.10457 14.017 6V3H21.017V15C21.017 18.3137 18.3307 21 15.017 21H14.017ZM3 21L3 18C3 16.8954 3.89543 16 5 16H8C8.55228 16 9 15.5523 9 15V9C9 8.44772 8.55228 8 8 8H5C3.89543 8 3 7.10457 3 6V3H10V15C10 18.3137 7.31371 21 4 21H3Z" />
+                            </svg>
+                        </div>
+                        <h3 data-i18n="test_card_5_quote">"Cross-border signing stopped being a legal bottleneck."</h3>
+                        <p class="role">General Counsel</p>
+                        <p class="text" data-i18n="test_card_5_text">Jurisdiction-aware workflows meant fewer
+                            escalations to legal and faster turnaround.</p>
+                    </div>
+                    <!-- Testimonial Card 6 -->
+                    <div class="testimonial-v2-card">
+                        <div class="quote-icon">
+                            <svg viewBox="0 0 24 24" width="40" height="40">
+                                <path fill="currentColor"
+                                    d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C14.9124 8 14.017 7.10457 14.017 6V3H21.017V15C21.017 18.3137 18.3307 21 15.017 21H14.017ZM3 21L3 18C3 16.8954 3.89543 16 5 16H8C8.55228 16 9 15.5523 9 15V9C9 8.44772 8.55228 8 8 8H5C3.89543 8 3 7.10457 3 6V3H10V15C10 18.3137 7.31371 21 4 21H3Z" />
+                            </svg>
+                        </div>
+                        <h3 data-i18n="test_card_6_quote">"Exiting the platform isn’t a risk scenario anymore."</h3>
+                        <p class="role">Procurement Director</p>
+                        <p class="text" data-i18n="test_card_6_text">Our documents remain independently verifiable,
+                            which changed how we evaluate long-term contracts.</p>
+                    </div>
+                    <!-- Testimonial Card 7 -->
+                    <div class="testimonial-v2-card">
+                        <div class="quote-icon">
+                            <svg viewBox="0 0 24 24" width="40" height="40">
+                                <path fill="currentColor"
+                                    d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H16.017C14.9124 8 14.017 7.10457 14.017 6V3H21.017V15C21.017 18.3137 18.3307 21 15.017 21H14.017ZM3 21L3 18C3 16.8954 3.89543 16 5 16H8C8.55228 16 9 15.5523 9 15V9C9 8.44772 8.55228 8 8 8H5C3.89543 8 3 7.10457 3 6V3H10V15C10 18.3137 7.31371 21 4 21H3Z" />
+                            </svg>
+                        </div>
+                        <h3 data-i18n="test_card_7_quote">"Security reviews focused on architecture, not promises."</h3>
+                        <p class="role">CISO</p>
+                        <p class="text" data-i18n="test_card_7_text">Zero-knowledge handling and verifiable audit trails
+                            made approvals faster by reducing risk by design.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="management-section reveal">
+        <div class="container">
+            <div class="management-header">
+                <h2>Easy to manage? <span>For sure.</span></h2>
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" id="prevBtn">❮</button>
+                    <button class="carousel-btn next" id="nextBtn">❯</button>
+                </div>
+            </div>
+
+            <div class="management-carousel" id="carousel">
+                <div class="carousel-track">
+                    <div class="carousel-card active">
+                        <div class="card-content">
+                            <span class="card-category">ACCESS & FLEXIBILITY</span>
+                            <h3>Access from anywhere</h3>
+                            <p>On a laptop, phone, or tablet. From the city, beach, or the savanna.</p>
+                        </div>
+                        <div class="card-image">
+                            <img src="brillsign_access_anywhere_1769792518327.png" alt="Multiple devices">
+                        </div>
+                    </div>
+
+                    <div class="carousel-card">
+                        <div class="card-content">
+                            <span class="card-category">SHARING & COLLABORATION</span>
+                            <h3>Send files instantly</h3>
+                            <p>Share files and folders with anyone, fast, easy, and secure.</p>
+                        </div>
+                        <div class="card-image">
+                            <img src="brillsign_send_instantly_1769792536421.png" alt="Document sharing">
+                        </div>
+                    </div>
+
+                    <div class="carousel-card">
+                        <div class="card-content">
+                            <span class="card-category">ANALYTICS & INSIGHTS</span>
+                            <h3>Real-time Tracking</h3>
+                            <p>Know exactly when your documents are opened, viewed, and signed.</p>
+                        </div>
+                        <div class="card-image">
+                            <img src="brillsign_access_anywhere_1769792518327.png" alt="Tracking Dashboard">
+                        </div>
+                    </div>
+
+                    <div class="carousel-card">
+                        <div class="card-content">
+                            <span class="card-category">SECURITY & COMPLIANCE</span>
+                            <h3>Bank-grade Security</h3>
+                            <p>AES-256 encryption and ISO 27001 certified data centers protect your data.</p>
+                        </div>
+                        <div class="card-image">
+                            <img src="brillsign_send_instantly_1769792536421.png" alt="Security Shield">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials-section reveal">
+        <div class="container">
+            <h2 class="testimonials-title">Getting <span>attention</span></h2>
+
+            <div class="testimonials-container">
+                <button class="test-btn prev" id="testPrev">❮</button>
+
+                <div class="testimonials-slider">
+                    <div class="test-track" id="testTrack">
+                        <div class="test-slide active">
+                            <blockquote class="test-quote">
+                                "This is a great value secure signature service with a fantastic team plan and the
+                                kind of security integration that few of its rivals can match."
+                            </blockquote>
+                            <div class="test-brand">
+                                <img src="press_logos.png" alt="TechRadar" class="press-logo techradar">
+                            </div>
+                            <a href="#" class="read-more">Read more ›</a>
+                        </div>
+
+                        <div class="test-slide">
+                            <blockquote class="test-quote">
+                                "The most intuitive document management platform we've ever tested. This sets a new
+                                standard for enterprise privacy and speed."
+                            </blockquote>
+                            <div class="test-brand">
+                                <img src="press_logos.png" alt="Forbes" class="press-logo forbes">
+                            </div>
+                            <a href="#" class="read-more">Read more ›</a>
+                        </div>
+
+                        <div class="test-slide">
+                            <blockquote class="test-quote">
+                                "Security-conscious businesses should look no further. This multi-layer
+                                encryption is top-tier."
+                            </blockquote>
+                            <div class="test-brand">
+                                <img src="press_logos.png" alt="PCMag" class="press-logo pcmag">
+                            </div>
+                            <a href="#" class="read-more">Read more ›</a>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="test-btn next" id="testNext">❯</button>
+            </div>
+
+            <div class="test-dots" id="testDots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+    <!-- SVG Gradient for Quote Icons -->
+    <svg style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#00ADEF;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#8A2BE2;stop-opacity:1" />
+        </linearGradient>
+    </svg>
+    </section>
+
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-newsletter">
+                <div class="newsletter-content">
+                    <h3>Stay updated</h3>
+                    <p>Get the latest news, features, and security updates directly in your inbox.</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn-primary">Subscribe</button>
+                </form>
+            </div>
+
+            <div class="footer-grid">
+                <div class="footer-col branding">
+                    <p>The most secure and easy-to-use digital signature platform for individuals and teams worldwide.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" width="20" height="20">
+                                <path fill="currentColor"
+                                    d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" width="20" height="20">
+                                <path fill="currentColor"
+                                    d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.48.75 2.78 1.9 3.55-.7 0-1.35-.2-1.94-.53v.05c0 2.05 1.47 3.75 3.39 4.14-.36.1-.74.15-1.13.15-.28 0-.55-.03-.81-.08.54 1.68 2.1 2.9 3.95 2.93-1.45 1.13-3.27 1.81-5.25 1.81-.34 0-.68-.02-1.02-.06C3.07 20.39 5.25 21 7.58 21 15.15 21 19.28 14.74 19.28 9.3c0-.18 0-.36-.01-.53.8-.59 1.49-1.32 2.04-2.15z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" width="20" height="20">
+                                <path fill="currentColor"
+                                    d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C18.34 21.21 22 17.06 22 12.06C22 6.53 17.5 2.04 12 2.04Z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <ul class="nav-menu">
+                        <li><a href="#features" data-i18n="nav_features">Features</a></li>
+                        <li><a href="#security" data-i18n="nav_security">Security</a></li>
+                        <li><a href="#pricing" data-i18n="nav_pricing">Pricing</a></li>
+                        <li><a href="#company" data-i18n="nav_company">Company</a></li>
+                        <li><a href="#integrations" data-i18n="nav_integrations">Integrations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                        <li><a href="#">Trust Center</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Legal Knowledge Base</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get the App</h4>
+                    <p>Manage documents on the go.</p>
+                    <div class="app-buttons">
+                        <a href="#" class="app-btn">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+                                alt="App Store">
+                        </a>
+                        <a href="#" class="app-btn">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                                alt="Google Play">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookies</a>
+                </div>
+                <p>&copy; 2026. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="animations.js"></script>
+    <script src="translations.js"></script>
+</body>
+
+</html>
