@@ -1,0 +1,10 @@
+<svg width="60" height="100" viewBox="0 0 60 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Yellow Vertical Stem -->
+  <rect x="0" y="5" width="4" height="90" rx="2" fill="#FFFF00"/>
+  
+  <!-- Blue Circle (Bottom Loop of B) -->
+  <circle cx="34" cy="66" r="32" fill="#1A73E8"/>
+  
+  <!-- Red Shape (Top Loop of B) -->
+  <path d="M4 8 H32 C52 8 52 52 32 52 H4 V8Z" fill="#FF0000" style="mix-blend-mode: multiply;"/>
+</svg>

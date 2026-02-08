@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrillSign Logo Typography Workshop</title>
+    <!-- Professional Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Varela+Round&family=Quicksand:wght@700&family=Lexend:wght@700&family=Comfortaa:wght@700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            color: #003755;
+            font-size: 3.5rem;
+            font-weight: 800;
+            letter-spacing: -0.05em;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            height: 1.25em;
+            width: auto;
+            vertical-align: middle;
+            margin-right: -25px;
+            /* Extremely tight spacing */
+            filter: url(#remove-bg);
+            /* The transparency filter */
+        }
+
+        .workshop-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .preview-card {
+            padding: 50px;
+            border: 1px solid #e2e8f0;
+            border-radius: 24px;
+            background: white;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+
+        .style-label {
+            font-size: 0.8rem;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin-bottom: 25px;
+            display: block;
+        }
+
+        .dark-version {
+            background-color: #020617;
+            padding: 30px;
+            border-radius: 16px;
+            margin-top: 30px;
+        }
+
+        .dark-version .logo-container {
+            color: #ffffff;
+        }
+
+        h1 {
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 0;
+        }
+
+        .subtitle {
+            color: #64748b;
+            margin-top: 10px;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- The background removal filter -->
+    <svg style="position: absolute; width: 0; height: 0;">
+        <filter id="remove-bg" color-interpolation-filters="sRGB">
+            <feColorMatrix type="matrix" values="1 0 0 0 0
+                                                 0 1 0 0 0
+                                                 0 0 1 0 0
+                                                 -1 -1 -1 3 0" />
+        </filter>
+    </svg>
+
+    <h1>BrillSign Sola-Style Workshop</h1>
+    <p class="subtitle">Highly professional "Rounded" typography with extremely tight icon spacing.</p>
+
+    <div class="workshop-grid">
+
+        <!-- Option 1: Varela Round (The "Sola" Match) -->
+        <div class="preview-card">
+            <span class="style-label">Option 1: Varela Round (Classic Sola Look)</span>
+            <a href="#" class="logo-container"
+                style="font-family: 'Varela Round', sans-serif; letter-spacing: -0.04em;">
+                <img src="assets/brillsign-b.png" class="logo-icon" alt="BrillSign Icon">
+                <span>rillSign</span>
+            </a>
+            <div class="dark-version">
+                <a href="#" class="logo-container"
+                    style="font-family: 'Varela Round', sans-serif; letter-spacing: -0.04em;">
+                    <img src="assets/brillsign-b.png" class="logo-icon" alt="BrillSign Icon">
+                    <span>rillSign</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Option 2: Quicksand (Geometric Rounded) -->
+        <div class="preview-card">
+            <span class="style-label">Option 2: Quicksand (Modern Geometric)</span>
+            <a href="#" class="logo-container"
+                style="font-family: 'Quicksand', sans-serif; font-weight: 700; letter-spacing: -0.06em;">
+                <img src="assets/brillsign-b.png" class="logo-icon" alt="BrillSign Icon">
+                <span>rillSign</span>
+            </a>
+            <div class="dark-version">
+                <a href="#" class="logo-container"
+                    style="font-family: 'Quicksand', sans-serif; font-weight: 700; letter-spacing: -0.06em;">
+                    <img src="assets/brillsign-b.png" class="logo-icon" alt="BrillSign Icon">
+                    <span>rillSign</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Option 3: Lexend (Precision Rounded) -->
+        <div class="preview-card">
+            <span class="style-label">Option 3: Lexend (Clean Tech Rounded)</span>
+            <a href="#" class="logo-container"
+                style="font-family: 'Lexend', sans-serif; font-weight: 700; letter-spacing: -0.08em;">
+                <img src="assets/brillsign-b.png" class="logo-icon" alt="BrillSign Icon">
+                <span>rillSign</span>
+            </a>
+            <div class="dark-version">
+                <a href="#" class="logo-container"
+                    style="font-family: 'Lexend', sans-serif; font-weight: 700; letter-spacing: -0.08em;">
+                    <img src="assets/brillsign-b.png" class="logo-icon" alt="BrillSign Icon">
+                    <span>rillSign</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Option 4: Comfortaa (Ultra Soft) -->
+        <div class="preview-card">
+            <span class="style-label">Option 4: Comfortaa (Unique Character)</span>
+            <a href="#" class="logo-container"
+                style="font-family: 'Comfortaa', cursive; font-weight: 700; letter-spacing: -0.1em;">
+                <img src="assets/brillsign-b.png" class="logo-icon" alt="BrillSign Icon">
+                <span>rillSign</span>
+            </a>
+            <div class="dark-version">
+                <a href="#" class="logo-container"
+                    style="font-family: 'Comfortaa', cursive; font-weight: 700; letter-spacing: -0.1em;">
+                    <img src="assets/brillsign-b.png" class="logo-icon" alt="BrillSign Icon">
+                    <span>rillSign</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <div style="margin-top: 40px; color: #94a3b8; font-size: 0.9rem;">
+        Spacing between icon and text has been reduced to -25px for maximum integration.
+    </div>
+</body>
+
+</html>

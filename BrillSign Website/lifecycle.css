@@ -1,0 +1,533 @@
+/* ========================================
+   LIFECYCLE SECTION: ISOMETRIC STACK
+   ======================================== */
+
+.lifecycle-section {
+    padding: 30px 0 50px;
+    background: #020617;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.lifecycle-container {
+    max-width: 1400px;
+    /* Increased for better 50-50 distribution */
+    margin: 0 auto;
+    padding: 0 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    /* Reduced gap for more space for content */
+    align-items: center;
+}
+
+/* Left Content: Numbered Steps */
+.lifecycle-content {
+    position: relative;
+    z-index: 2;
+}
+
+.lifecycle-header-centered {
+    text-align: center;
+    max-width: 1000px;
+    margin: -40px auto 30px;
+    padding: 0 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.lifecycle-main-title {
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 12px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    line-height: 1.1;
+    text-align: center;
+    background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 40%, #94a3b8 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.1));
+}
+
+.lifecycle-main-title span {
+    color: #ffffff;
+    -webkit-text-fill-color: #ffffff;
+    text-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+}
+
+.lifecycle-sub-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #3b82f6;
+    margin-bottom: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    text-align: center;
+    opacity: 0.9;
+}
+
+.lifecycle-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.lifecycle-step {
+    display: flex;
+    gap: 24px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lifecycle-step.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.step-number {
+    width: 32px;
+    height: 32px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3b82f6;
+    font-size: 0.9rem;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.step-info h4 {
+    color: #fff;
+    font-size: 1.05rem;
+    /* Slightly reduced */
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+.step-info p {
+    color: #94a3b8;
+    line-height: 1.5;
+    font-size: 0.88rem;
+    /* Slightly reduced */
+}
+
+/* Right Content: 3D Schematic Vertical Stack */
+.lifecycle-visual {
+    position: relative;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 2500px;
+    background: radial-gradient(circle at center, rgba(59, 130, 246, 0.05) 0%, transparent 70%);
+}
+
+.schematic-elements {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    transform-style: preserve-3d;
+}
+
+.grid-floor {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: 1000px;
+    height: 600px;
+    transform: translateX(-50%) rotateX(75deg);
+    background-image:
+        linear-gradient(to right, rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    mask-image: radial-gradient(ellipse at center, black, transparent 80%);
+}
+
+/* Staggering Logic */
+
+.stack-container {
+    position: relative;
+    width: 260px;
+    height: 360px;
+    transform: rotateX(15deg) rotateY(-30deg) translateX(-250px);
+    /* Shifted further left */
+    transform-style: preserve-3d;
+    transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stack-connectors {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    transform-style: preserve-3d;
+}
+
+.connector-line {
+    position: absolute;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(59, 130, 246, 0.3) 50%, transparent 50%);
+    background-size: 10px 1px;
+    transform-origin: left;
+}
+
+/* Precise connector positioning (Bridging 120px X spread) */
+.line-1-2 {
+    width: 130px;
+    transform: translate3d(210px, 180px, -25px) rotateY(-80deg);
+}
+
+.line-2-3 {
+    width: 130px;
+    transform: translate3d(330px, 180px, -75px) rotateY(-80deg);
+}
+
+.line-3-4 {
+    width: 130px;
+    transform: translate3d(450px, 180px, -125px) rotateY(-80deg);
+}
+
+.line-4-5 {
+    width: 130px;
+    transform: translate3d(570px, 180px, -175px) rotateY(-80deg);
+}
+
+.line-5-6 {
+    width: 130px;
+    transform: translate3d(690px, 180px, -225px) rotateY(-80deg);
+}
+
+.stack-card {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.85);
+    /* Slightly more transparent */
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    /* Slightly sharper for technical look */
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.6),
+        inset 0 0 30px rgba(59, 130, 246, 0.05);
+    transform-style: preserve-3d;
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity: 0;
+    overflow: hidden;
+}
+
+.card-grid-overlay {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(59, 130, 246, 0.15) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.stack-card.active {
+    opacity: 1;
+}
+
+.stack-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+}
+
+/* Increased Lateral Staggering (120px spread) for legibility */
+.stack-card.active.card-1 {
+    transform: translate3d(0, 0, 0);
+    z-index: 6;
+}
+
+.stack-card.active.card-2 {
+    transform: translate3d(120px, 0, -50px);
+    z-index: 5;
+}
+
+.stack-card.active.card-3 {
+    transform: translate3d(240px, 0, -100px);
+    z-index: 4;
+}
+
+.stack-card.active.card-4 {
+    transform: translate3d(360px, 0, -150px);
+    z-index: 3;
+}
+
+.stack-card.active.card-5 {
+    transform: translate3d(480px, 0, -200px);
+    z-index: 2;
+}
+
+.stack-card.active.card-6 {
+    transform: translate3d(600px, 0, -250px);
+    z-index: 1;
+}
+
+/* Card Internal Content */
+.card-icon {
+    width: 40px;
+    /* Reduced size */
+    height: 40px;
+    /* Reduced size */
+    background: rgba(59, 130, 246, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    /* Reduced margin */
+}
+
+.card-icon i {
+    color: #3b82f6;
+    font-size: 1.5rem;
+}
+
+.card-title {
+    color: #fff;
+    font-size: 1.6rem;
+    /* Increased for stand-up profile */
+    font-weight: 700;
+    margin-bottom: 25px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.card-details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.detail-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+.detail-row i {
+    color: #22c55e;
+    font-size: 0.8rem;
+}
+
+/* Elite Card Content: Metadata, Status, Progress */
+.card-status-badge {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 10px;
+    background: rgba(59, 130, 246, 0.1);
+    color: #3b82f6;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 4px;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+.badge-final {
+    background: rgba(34, 197, 94, 0.1);
+    color: #22c55e;
+    border-color: rgba(34, 197, 94, 0.3);
+    text-shadow: 0 0 10px rgba(34, 197, 94, 0.5);
+}
+
+.card-metadata {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.meta-row {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: rgba(148, 163, 184, 0.6);
+    letter-spacing: 0.5px;
+}
+
+.card-progress-mini {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #3b82f6, #60a5fa);
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+/* Connectors/Lines */
+.stack-line {
+    position: absolute;
+    width: 2px;
+    background: linear-gradient(to bottom, rgba(59, 130, 246, 0.5), transparent);
+    transform-origin: top;
+    height: 300px;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .lifecycle-container {
+        grid-template-columns: 1fr;
+        padding-top: 60px;
+    }
+
+    .lifecycle-visual {
+        height: 400px;
+        order: -1;
+    }
+
+    .stack-container {
+        width: 300px;
+        height: 200px;
+        transform: rotateX(45deg) rotateZ(-25deg);
+    }
+
+    .lifecycle-title {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+}
+
+/* ========================================
+   LIGHT MODE OVERRIDES - BRAND COLORS
+   ======================================== */
+
+[data-theme="light"] .lifecycle-section {
+    background:
+        radial-gradient(circle at 50% 50%, rgba(0, 102, 255, 0.15) 0%, transparent 50%),
+        #f0f9ff;
+}
+
+[data-theme="light"] .lifecycle-main-title {
+    color: #003755 !important;
+    background: none !important;
+    -webkit-text-fill-color: #003755 !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+    filter: none !important;
+}
+
+[data-theme="light"] .lifecycle-main-title span {
+    color: #0066ff !important;
+    -webkit-text-fill-color: #0066ff !important;
+    text-shadow: none !important;
+}
+
+[data-theme="light"] .lifecycle-sub-title {
+    color: #0066ff;
+    opacity: 1;
+}
+
+[data-theme="light"] .step-number {
+    background: rgba(0, 102, 255, 0.1);
+    border-color: rgba(0, 102, 255, 0.3);
+    color: #0066ff;
+}
+
+[data-theme="light"] .step-info h4 {
+    color: #003755;
+}
+
+[data-theme="light"] .step-info p {
+    color: #475569;
+}
+
+[data-theme="light"] .lifecycle-visual {
+    background: radial-gradient(circle at center, rgba(0, 102, 255, 0.08) 0%, transparent 70%);
+}
+
+[data-theme="light"] .grid-floor {
+    background-image:
+        linear-gradient(to right, rgba(0, 102, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 102, 255, 0.1) 1px, transparent 1px);
+}
+
+[data-theme="light"] .stack-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(0, 102, 255, 0.2);
+    box-shadow:
+        0 20px 50px rgba(0, 102, 255, 0.1),
+        inset 0 0 30px rgba(0, 102, 255, 0.03);
+}
+
+[data-theme="light"] .card-grid-overlay {
+    background-image: radial-gradient(rgba(0, 102, 255, 0.1) 1px, transparent 1px);
+}
+
+[data-theme="light"] .card-icon {
+    background: rgba(0, 102, 255, 0.1);
+}
+
+[data-theme="light"] .card-icon i {
+    color: #0066ff;
+}
+
+[data-theme="light"] .card-title {
+    color: #003755;
+}
+
+[data-theme="light"] .detail-row {
+    color: #475569;
+}
+
+[data-theme="light"] .card-status-badge {
+    background: rgba(0, 102, 255, 0.1);
+    color: #0066ff;
+    border-color: rgba(0, 102, 255, 0.3);
+    text-shadow: none;
+}
+
+[data-theme="light"] .badge-final {
+    background: rgba(34, 197, 94, 0.1);
+    color: #16a34a;
+    border-color: rgba(34, 197, 94, 0.3);
+}
+
+[data-theme="light"] .card-metadata {
+    border-top-color: rgba(0, 102, 255, 0.1);
+}
+
+[data-theme="light"] .meta-row {
+    color: #64748b;
+}
+
+[data-theme="light"] .card-progress-mini {
+    background: rgba(0, 102, 255, 0.05);
+}
+
+[data-theme="light"] .progress-fill {
+    background: linear-gradient(90deg, #0066ff, #60a5fa);
+    box-shadow: 0 0 10px rgba(0, 102, 255, 0.3);
+}
+
+[data-theme="light"] .connector-line {
+    background-image: linear-gradient(to right, rgba(0, 102, 255, 0.3) 50%, transparent 50%);
+}
