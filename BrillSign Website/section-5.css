@@ -1,0 +1,375 @@
+/* ========================================
+   SECTION 5: INTEGRATIONS & TRUST
+   ======================================== */
+
+.section-5 {
+    padding: 100px 0 120px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Integrations Banner */
+.integrations-banner {
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 32px;
+    padding: 60px;
+    margin-bottom: 100px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.5);
+}
+
+.integration-content {
+    max-width: 500px;
+    z-index: 2;
+}
+
+.integration-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+}
+
+.integration-desc {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 32px;
+    line-height: 1.6;
+}
+
+.integration-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 28px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: #fff;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.integration-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* 3D Floating Elements Visual */
+.integration-visual {
+    position: relative;
+    width: 500px;
+    height: 300px;
+}
+
+.floating-element {
+    position: absolute;
+    background: rgba(30, 41, 59, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #fff;
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Specific floating icons positions - Matching Screenshot */
+.float-1 {
+    /* Salesforce - Top Right */
+    width: 70px;
+    height: 70px;
+    top: 15%;
+    right: 25%;
+    animation-delay: 0s;
+    font-size: 2.2rem;
+}
+
+.float-2 {
+    /* Drive - Bottom Right */
+    width: 55px;
+    height: 55px;
+    top: 65%;
+    right: 25%;
+    animation-delay: 2s;
+    font-size: 1.5rem;
+}
+
+.float-3 {
+    /* Slack - Left Mid */
+    width: 90px;
+    height: 90px;
+    top: 35%;
+    right: 55%;
+    animation-delay: 4s;
+    font-size: 3rem;
+}
+
+.float-4 {
+    /* Dropbox - Far Right Mid */
+    width: 45px;
+    height: 45px;
+    top: 30%;
+    right: 10%;
+    animation-delay: 1s;
+    font-size: 1.2rem;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+}
+
+/* Trust Statement */
+.trust-statement {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 80px;
+}
+
+.trust-lead {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #94a3b8;
+    margin-bottom: 24px;
+    display: block;
+}
+
+.trust-main-text {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.3;
+}
+
+.trust-main-text strong {
+    background: linear-gradient(to right, #6366f1, #a855f7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Visual Cues Grid */
+.visual-cues-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 100px;
+}
+
+.cue-card {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    transition: all 0.3s ease;
+}
+
+.cue-card:hover {
+    background: rgba(30, 41, 59, 0.8);
+    border-color: rgba(99, 102, 241, 0.3);
+    transform: translateY(-5px);
+}
+
+.cue-icon {
+    font-size: 1.5rem;
+    color: #818cf8;
+    background: rgba(99, 102, 241, 0.1);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.cue-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #e2e8f0;
+}
+
+/* Final CTA Section */
+.section-5-cta {
+    text-align: center;
+    padding: 80px;
+    background: radial-gradient(circle at center, rgba(99, 102, 241, 0.15) 0%, rgba(15, 23, 42, 0.4) 70%);
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+.cta-subtitle {
+    font-size: 1.25rem;
+    color: #94a3b8;
+    margin-bottom: 40px;
+}
+
+.waitlist-btn {
+    display: inline-block;
+    padding: 18px 48px;
+    background: #4f46e5;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 100px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 30px -10px rgba(79, 70, 229, 0.5);
+    cursor: pointer;
+}
+
+.waitlist-btn:hover {
+    background: #4338ca;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 20px 40px -10px rgba(79, 70, 229, 0.7);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .integrations-banner {
+        flex-direction: column;
+        text-align: center;
+        gap: 60px;
+    }
+
+    .visual-cues-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .visual-cues-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .integration-title,
+    .cta-title {
+        font-size: 2.2rem;
+    }
+
+    .trust-main-text {
+        font-size: 1.8rem;
+    }
+}
+
+/* ========================================
+   LIGHT MODE OVERRIDES - BRAND COLORS
+   ======================================== */
+
+[data-theme="light"] .section-5 {
+    background:
+        radial-gradient(circle at 50% 50%, rgba(0, 102, 255, 0.15) 0%, transparent 60%),
+        #f0f9ff;
+}
+
+[data-theme="light"] .integrations-banner {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(0, 102, 255, 0.15);
+    box-shadow: 0 40px 80px -20px rgba(0, 102, 255, 0.1);
+}
+
+[data-theme="light"] .integration-title {
+    color: #003755;
+}
+
+[data-theme="light"] .integration-desc {
+    color: #475569;
+}
+
+[data-theme="light"] .integration-btn {
+    background: rgba(0, 102, 255, 0.05);
+    border-color: rgba(0, 102, 255, 0.1);
+    color: #0066ff;
+}
+
+[data-theme="light"] .integration-btn:hover {
+    background: rgba(0, 102, 255, 0.1);
+}
+
+[data-theme="light"] .floating-element {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(0, 102, 255, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 102, 255, 0.1);
+    color: #0066ff;
+}
+
+[data-theme="light"] .trust-lead {
+    color: #0066ff;
+    font-weight: 700;
+}
+
+[data-theme="light"] .trust-main-text {
+    color: #003755;
+}
+
+[data-theme="light"] .trust-main-text strong {
+    background: linear-gradient(to right, #0066ff, #ff0000);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+[data-theme="light"] .cue-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(0, 102, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 102, 255, 0.05);
+}
+
+[data-theme="light"] .cue-card:hover {
+    background: #fff;
+    border-color: rgba(0, 102, 255, 0.3);
+}
+
+[data-theme="light"] .cue-icon {
+    background: rgba(0, 102, 255, 0.1);
+    color: #0066ff;
+}
+
+[data-theme="light"] .cue-text {
+    color: #003755;
+}
+
+[data-theme="light"] .section-5-cta {
+    background: radial-gradient(circle at center, rgba(0, 102, 255, 0.1) 0%, rgba(255, 255, 255, 0.5) 70%), #f8fafc;
+    border-color: rgba(0, 102, 255, 0.15);
+}
+
+[data-theme="light"] .cta-title {
+    color: #003755;
+}
+
+[data-theme="light"] .cta-subtitle {
+    color: #475569;
+}

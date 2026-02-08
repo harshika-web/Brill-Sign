@@ -1,0 +1,594 @@
+/* ========================================
+   SECTION 3: COMPARISON TABLE STYLES
+   ======================================== */
+
+.comparison-table-section {
+    padding: 100px 0;
+    background: var(--bg-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.comparison-table-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.comparison-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 800px;
+    margin: 20px auto 0;
+    line-height: 1.6;
+}
+
+.comparison-table-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.5);
+}
+
+.elite-comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.elite-comparison-table th,
+.elite-comparison-table td {
+    padding: 24px 32px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.elite-comparison-table th {
+    background: rgba(255, 255, 255, 0.03);
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+}
+
+.feature-col {
+    font-weight: 600;
+    color: #fff;
+    width: 30%;
+}
+
+.trad-col {
+    color: #94a3b8;
+    width: 35%;
+}
+
+.crypt-col {
+    color: #a5b4fc;
+    font-weight: 600;
+    width: 35%;
+    background: rgba(99, 102, 241, 0.03);
+    position: relative;
+}
+
+/* Elite column highlight for Encrypted eSign */
+.crypt-col::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #4f46e5, transparent);
+}
+
+.elite-comparison-table tr:last-child td {
+    border-bottom: none;
+}
+
+.elite-comparison-table tr:hover td {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/* Staggered Row Animation */
+.animate-row {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.animate-row.observed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Glow effects */
+.comparison-table-section::before {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.05) 0%, transparent 70%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* ========================================
+   SIGNING LIFECYCLE STYLES
+   ======================================== */
+
+.signing-lifecycle-wrapper {
+    margin-top: 100px;
+    padding-top: 80px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lifecycle-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.lifecycle-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.lifecycle-intro {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.lifecycle-visual {
+    width: 100%;
+    max-width: 900px;
+    aspect-ratio: 16/9;
+    margin-bottom: 60px;
+}
+
+.demo-placeholder {
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    overflow: hidden;
+    color: var(--text-secondary);
+    box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.5);
+}
+
+.play-indicator {
+    width: 80px;
+    height: 80px;
+    background: rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #818cf8;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.demo-placeholder:hover .play-indicator {
+    transform: scale(1.1) rotate(5deg);
+    background: rgba(99, 102, 241, 0.2);
+    box-shadow: 0 0 40px rgba(99, 102, 241, 0.4);
+}
+
+.glow-hint {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 4px 12px;
+    background: rgba(99, 102, 241, 0.1);
+    border-radius: 100px;
+    color: #a5b4fc;
+}
+
+.lifecycle-flow-container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 20px 0;
+}
+
+.flow-narrative-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.steps-label {
+    font-size: 1.1rem;
+    color: #94a3b8;
+    font-weight: 600;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+/* --- THE CRYPTOGRAPHIC CHAIN --- */
+.lifecycle-chain {
+    position: relative;
+    width: 100%;
+    padding: 40px 0;
+}
+
+/* Central Glowing Spine */
+.chain-spine {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 2px;
+    height: 0;
+    background: linear-gradient(to bottom,
+            rgba(99, 102, 241, 0) 0%,
+            rgba(99, 102, 241, 0.8) 20%,
+            rgba(34, 211, 238, 0.8) 80%,
+            rgba(34, 211, 238, 0) 100%);
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.5);
+    transform: translateX(-50%);
+    transition: height 3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+}
+
+.chain-spine.observed {
+    height: 100%;
+}
+
+.chain-step {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 2;
+}
+
+.chain-step:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Glowing Nodes */
+.chain-node {
+    width: 50px;
+    height: 50px;
+    background: #0f172a;
+    border: 2px solid #4f46e5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 20px rgba(79, 70, 229, 0.4);
+    transition: all 0.4s ease;
+}
+
+.chain-step:hover .chain-node {
+    background: #4f46e5;
+    box-shadow: 0 0 30px rgba(79, 70, 229, 0.8);
+    transform: translateX(-50%) scale(1.1);
+}
+
+/* Glassmorphic Chain Cards */
+.chain-card {
+    width: 42%;
+    padding: 24px 30px;
+    background: rgba(30, 41, 59, 0.4);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transform-origin: center center;
+}
+
+.chain-step:nth-child(odd) .chain-card {
+    margin-left: 0;
+    margin-right: calc(50% + 40px);
+}
+
+.chain-step:nth-child(even) .chain-card {
+    margin-right: 0;
+    margin-left: calc(50% + 40px);
+}
+
+.chain-step:hover .chain-card {
+    background: rgba(30, 41, 59, 0.6);
+    border-color: rgba(99, 102, 241, 0.3);
+    transform: translateY(-10px) rotateY(5deg);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.chain-step:nth-child(even):hover .chain-card {
+    transform: translateY(-10px) rotateY(-5deg);
+}
+
+.step-title {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #f8fafc;
+    margin-bottom: 8px;
+    background: linear-gradient(to right, #fff, #94a3b8);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.step-desc {
+    font-size: 0.95rem;
+    color: #94a3b8;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Animations for Chain Steps */
+.chain-step.animate-row {
+    opacity: 0;
+    transform: translateY(40px) scale(0.9);
+}
+
+.chain-step.animate-row.observed {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Outcome Box Re-aligned */
+.key-outcome-box {
+    margin: 40px auto 0;
+    width: 100%;
+    max-width: 800px;
+    background: linear-gradient(135deg, rgba(79, 70, 229, 0.1) 0%, rgba(15, 23, 42, 0.5) 100%);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    border-radius: 24px;
+    padding: 35px 45px;
+    text-align: center;
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.4);
+    position: relative;
+    z-index: 5;
+}
+
+.outcome-label {
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #818cf8;
+    margin-bottom: 12px;
+}
+
+.outcome-text {
+    font-size: 1.3rem;
+    color: #f1f5f9;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.outcome-text strong {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(99, 102, 241, 0.3);
+}
+
+@media (max-width: 900px) {
+    .chain-spine {
+        left: 30px;
+        transform: none;
+    }
+
+    .chain-node {
+        left: 30px;
+        transform: translateX(-50%);
+    }
+
+    .chain-step,
+    .chain-step:nth-child(even) {
+        flex-direction: row;
+        justify-content: flex-start;
+        padding-left: 70px;
+    }
+
+    .chain-card {
+        width: 100%;
+        margin: 0 !important;
+    }
+
+    .chain-step:hover .chain-card {
+        transform: translateY(-5px);
+    }
+}
+
+/* ========================================
+   LIGHT MODE OVERRIDES - BRAND COLORS
+   ======================================== */
+
+[data-theme="light"] .comparison-table-section {
+    background:
+        radial-gradient(circle at 50% 50%, rgba(0, 102, 255, 0.15) 0%, transparent 50%),
+        #f0f9ff;
+}
+
+[data-theme="light"] .comparison-table-section::before {
+    background: none;
+}
+
+[data-theme="light"] .comparison-subtitle {
+    color: #003755;
+}
+
+[data-theme="light"] .comparison-table-wrapper {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 102, 255, 0.15);
+    box-shadow: 0 40px 100px -20px rgba(0, 102, 255, 0.1);
+}
+
+[data-theme="light"] .elite-comparison-table th,
+[data-theme="light"] .elite-comparison-table td {
+    border-bottom: 1px solid rgba(0, 102, 255, 0.08);
+}
+
+[data-theme="light"] .elite-comparison-table th {
+    background: rgba(0, 102, 255, 0.05);
+    color: #003755;
+}
+
+[data-theme="light"] .feature-col {
+    color: #0066ff;
+    font-weight: 700;
+}
+
+[data-theme="light"] .trad-col {
+    color: #003755;
+}
+
+[data-theme="light"] .crypt-col {
+    color: #0066ff;
+    background: rgba(0, 102, 255, 0.03);
+}
+
+[data-theme="light"] .crypt-col::after {
+    background: linear-gradient(to bottom, transparent, #0066ff, transparent);
+}
+
+[data-theme="light"] .elite-comparison-table tr:hover td {
+    background: rgba(0, 102, 255, 0.02);
+}
+
+[data-theme="light"] .lifecycle-title {
+    color: #0066ff;
+    font-weight: 800;
+}
+
+[data-theme="light"] .lifecycle-intro {
+    color: #003755;
+}
+
+[data-theme="light"] .demo-placeholder {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 102, 255, 0.15);
+    color: #003755;
+    box-shadow: 0 30px 60px -15px rgba(0, 102, 255, 0.1);
+}
+
+[data-theme="light"] .play-indicator {
+    background: rgba(0, 102, 255, 0.08);
+    border: 1px solid rgba(0, 102, 255, 0.2);
+    color: #0066ff;
+}
+
+[data-theme="light"] .demo-placeholder:hover .play-indicator {
+    background: rgba(0, 102, 255, 0.15);
+    box-shadow: 0 0 40px rgba(0, 102, 255, 0.3);
+}
+
+[data-theme="light"] .glow-hint {
+    background: rgba(0, 102, 255, 0.08);
+    color: #0066ff;
+}
+
+[data-theme="light"] .flow-narrative-title {
+    color: #0066ff;
+    font-weight: 800;
+}
+
+[data-theme="light"] .steps-label {
+    color: #003755;
+}
+
+[data-theme="light"] .chain-spine {
+    background: linear-gradient(to bottom,
+            rgba(0, 102, 255, 0) 0%,
+            rgba(0, 102, 255, 0.6) 20%,
+            rgba(0, 102, 255, 0.6) 80%,
+            rgba(0, 102, 255, 0) 100%);
+    box-shadow: 0 0 15px rgba(0, 102, 255, 0.3);
+}
+
+[data-theme="light"] .chain-node {
+    background: #ffffff;
+    border: 2px solid #0066ff;
+    color: #0066ff;
+    box-shadow: 0 0 20px rgba(0, 102, 255, 0.2);
+}
+
+[data-theme="light"] .chain-step:hover .chain-node {
+    background: #0066ff;
+    color: #ffffff;
+    box-shadow: 0 0 30px rgba(0, 102, 255, 0.5);
+}
+
+[data-theme="light"] .chain-card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 102, 255, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 102, 255, 0.08);
+}
+
+[data-theme="light"] .chain-step:hover .chain-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(0, 102, 255, 0.3);
+    box-shadow: 0 25px 50px -12px rgba(0, 102, 255, 0.15);
+}
+
+[data-theme="light"] .step-title {
+    color: #0066ff;
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+    font-weight: 800;
+}
+
+[data-theme="light"] .step-desc {
+    color: #003755;
+}
+
+[data-theme="light"] .key-outcome-box {
+    background:
+        radial-gradient(circle at 50% 50%, rgba(0, 102, 255, 0.08) 0%, transparent 60%),
+        rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(0, 102, 255, 0.3);
+    box-shadow: 0 30px 60px -12px rgba(0, 102, 255, 0.15);
+}
+
+[data-theme="light"] .outcome-label {
+    color: #0066ff;
+}
+
+[data-theme="light"] .outcome-text {
+    color: #003755;
+}
+
+[data-theme="light"] .outcome-text strong {
+    color: #0066ff;
+    text-shadow: none;
+    font-weight: 800;
+}
+
+[data-theme="light"] .signing-lifecycle-wrapper {
+    border-top: 1px solid rgba(0, 102, 255, 0.1);
+}

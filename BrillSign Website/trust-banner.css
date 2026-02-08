@@ -1,0 +1,499 @@
+/* ========================================
+   ELITE TRUST BANNER STYLES
+   ======================================== */
+
+.trust-banner-section {
+    padding: 120px 0;
+    background-color: #020617;
+    background-image:
+        linear-gradient(rgba(2, 6, 23, 0.3), rgba(2, 6, 23, 0.3)),
+        url('images/trust-banner-actual-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+}
+
+.trust-banner-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 60px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 80px;
+    align-items: center;
+
+    /* Glassmorphic "Elite" Box */
+    background: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 40px;
+    box-shadow:
+        0 40px 100px -20px rgba(0, 0, 0, 0.6),
+        inset 0 0 40px rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Professional Mesh/Grid Texture */
+.trust-banner-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    mask-image: radial-gradient(circle at 70% 50%, black 20%, transparent 80%);
+    -webkit-mask-image: radial-gradient(circle at 70% 50%, black 20%, transparent 80%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.trust-header {
+    position: relative;
+    z-index: 2;
+}
+
+/* Banner Content */
+.trust-header h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #cbd5e1;
+    /* Slate 300 */
+    margin-bottom: 30px;
+}
+
+.trust-header h2 strong {
+    display: block;
+    color: #fff;
+    font-weight: 800;
+    margin-top: 8px;
+}
+
+.trust-cta-area {
+    margin-top: 40px;
+}
+
+.trust-btn {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: linear-gradient(135deg, #00d2ff 0%, #3b82f6 100%);
+    color: #fff;
+    padding: 14px 32px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.trust-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px rgba(0, 210, 255, 0.4);
+    filter: brightness(1.05);
+}
+
+.btn-main-text {
+    font-size: 1.15rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #fff;
+}
+
+.btn-sub-text {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.85);
+    margin-top: 4px;
+}
+
+
+/* Visual: The Ring & Cues */
+.trust-visual-wrapper {
+    position: relative;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* The Animated Ring */
+.trust-portal-ring {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    height: 360px;
+    border: 8px solid #3b82f6;
+    /* Blue 500 */
+    border-radius: 50%;
+    transform: perspective(1000px) rotateY(65deg) rotateX(15deg) rotateZ(-5deg);
+    box-shadow:
+        0 0 40px rgba(59, 130, 246, 0.4),
+        inset 0 0 20px rgba(59, 130, 246, 0.4);
+    animation: ring-pulse 4s infinite ease-in-out;
+    z-index: 2;
+}
+
+.trust-portal-ring::before {
+    content: '';
+    position: absolute;
+    inset: -15px;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 50%;
+    animation: ring-rotate 20s linear infinite;
+}
+
+@keyframes ring-pulse {
+
+    0%,
+    100% {
+        transform: perspective(1000px) rotateY(65deg) rotateX(15deg) rotateZ(-5deg) scale(1);
+        box-shadow: 0 0 40px rgba(59, 130, 246, 0.4);
+    }
+
+    50% {
+        transform: perspective(1000px) rotateY(67deg) rotateX(17deg) rotateZ(-5deg) scale(1.02);
+        box-shadow: 0 0 60px rgba(59, 130, 246, 0.6);
+    }
+}
+
+@keyframes ring-rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Floating Cues - Enhanced Variety */
+.trust-cues-container {
+    position: absolute;
+    left: 60px;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.trust-cue {
+    position: absolute;
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateX(0) scale(0.8);
+    box-shadow: 0 0 20px rgba(0, 173, 239, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+/* Varied Sizes */
+.cue-sm {
+    width: 32px;
+    height: 32px;
+}
+
+.cue-md {
+    width: 48px;
+    height: 48px;
+}
+
+.cue-lg {
+    width: 64px;
+    height: 64px;
+}
+
+.trust-cue i {
+    color: #00ADEF;
+    filter: drop-shadow(0 0 8px rgba(0, 173, 239, 0.6));
+    transition: all 0.3s ease;
+}
+
+.cue-sm i {
+    font-size: 0.8rem;
+}
+
+.cue-md i {
+    font-size: 1.25rem;
+}
+
+.cue-lg i {
+    font-size: 1.7rem;
+}
+
+/* Pulsing Glow Elements */
+.trust-cue.has-pulse::after {
+    content: '';
+    position: absolute;
+    inset: -5px;
+    border: 1px solid rgba(0, 173, 239, 0.4);
+    border-radius: 50%;
+    animation: cue-pulse 2.5s infinite ease-out;
+}
+
+@keyframes cue-pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* Dynamic Animation Paths */
+@keyframes cue-float-1 {
+    0% {
+        opacity: 0;
+        transform: translate(-40px, 0) scale(0.5);
+    }
+
+    12% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+
+    85% {
+        opacity: 1;
+        transform: translate(320px, -40px) scale(1.1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(380px, -50px) scale(1.2);
+    }
+}
+
+@keyframes cue-float-2 {
+    0% {
+        opacity: 0;
+        transform: translate(-30px, 20px) scale(0.5);
+    }
+
+    15% {
+        opacity: 1;
+        transform: translate(0, 10px) scale(1);
+    }
+
+    88% {
+        opacity: 1;
+        transform: translate(300px, 60px) scale(1.05);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(350px, 80px) scale(1.1);
+    }
+}
+
+@keyframes cue-float-3 {
+    0% {
+        opacity: 0;
+        transform: translate(-50px, -20px) scale(0.5);
+    }
+
+    10% {
+        opacity: 1;
+        transform: translate(0, -10px) scale(1.1);
+    }
+
+    80% {
+        opacity: 1;
+        transform: translate(340px, 20px) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(400px, 30px) scale(0.9);
+    }
+}
+
+@keyframes cue-float-4 {
+    0% {
+        opacity: 0;
+        transform: translate(-20px, 40px) scale(0.5);
+    }
+
+    12% {
+        opacity: 1;
+        transform: translate(0, 30px) scale(0.9);
+    }
+
+    82% {
+        opacity: 1;
+        transform: translate(280px, -30px) scale(1.1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(330px, -40px) scale(1.2);
+    }
+}
+
+@keyframes cue-float-5 {
+    0% {
+        opacity: 0;
+        transform: translate(-60px, 10px) scale(0.5);
+    }
+
+    15% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1.2);
+    }
+
+    85% {
+        opacity: 1;
+        transform: translate(360px, -20px) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(420px, -30px) scale(0.8);
+    }
+}
+
+/* Applying Paths and Timings */
+.cue-1 {
+    top: 10%;
+    animation: cue-float-1 12s infinite ease-in-out;
+    animation-delay: 0s;
+}
+
+.cue-2 {
+    top: 35%;
+    animation: cue-float-2 10s infinite ease-in-out;
+    animation-delay: 2.5s;
+}
+
+.cue-3 {
+    top: 60%;
+    animation: cue-float-3 14s infinite ease-in-out;
+    animation-delay: 5s;
+}
+
+.cue-4 {
+    top: 80%;
+    animation: cue-float-4 11s infinite ease-in-out;
+    animation-delay: 1.2s;
+}
+
+.cue-5 {
+    top: 25%;
+    animation: cue-float-5 13s infinite ease-in-out;
+    animation-delay: 3.8s;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .trust-banner-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .trust-visual-wrapper {
+        height: 300px;
+        order: -1;
+    }
+
+    .trust-portal-ring {
+        left: 50%;
+        transform: translateX(-50%) perspective(1000px) rotateY(60deg);
+    }
+
+    @keyframes ring-pulse {
+
+        0%,
+        100% {
+            transform: translateX(-50%) perspective(1000px) rotateY(60deg) scale(1);
+        }
+
+        50% {
+            transform: translateX(-50%) perspective(1000px) rotateY(60deg) scale(1.02);
+        }
+    }
+
+    .trust-cues-container {
+        left: 50%;
+    }
+}
+
+/* ========================================
+   LIGHT MODE OVERRIDES - BRAND COLORS
+   ======================================== */
+
+[data-theme="light"] .trust-banner-section {
+    background:
+        radial-gradient(circle at 0% 0%, rgba(255, 215, 0, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 100% 100%, rgba(255, 80, 80, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(0, 102, 255, 0.15) 0%, transparent 70%),
+        #f8fafc;
+}
+
+[data-theme="light"] .trust-banner-container {
+    background: #ffffff;
+    border: 1px solid rgba(0, 102, 255, 0.1);
+    box-shadow:
+        0 40px 100px -20px rgba(0, 55, 85, 0.08),
+        0 20px 40px -10px rgba(0, 0, 0, 0.02);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+}
+
+[data-theme="light"] .trust-banner-container::before {
+    background-image:
+        linear-gradient(rgba(0, 102, 255, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 102, 255, 0.08) 1px, transparent 1px);
+    background-size: 40px 40px;
+    mask-image: radial-gradient(circle at center, black 50%, transparent 95%);
+    -webkit-mask-image: radial-gradient(circle at center, black 50%, transparent 95%);
+    opacity: 1;
+}
+
+[data-theme="light"] .trust-header h2 {
+    color: #003755;
+}
+
+[data-theme="light"] .trust-header h2 strong,
+[data-theme="light"] .trust-header h2 .text-highlight {
+    color: #0066ff !important;
+    background: none !important;
+    -webkit-text-fill-color: #0066ff !important;
+}
+
+[data-theme="light"] .trust-portal-ring {
+    border-color: rgba(0, 102, 255, 0.4);
+    box-shadow:
+        0 0 40px rgba(0, 102, 255, 0.1),
+        inset 0 0 20px rgba(0, 102, 255, 0.05);
+}
+
+[data-theme="light"] .trust-cue {
+    background: #ffffff;
+    border: 1px solid rgba(0, 102, 255, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 55, 85, 0.06);
+    color: #003755;
+}
+
+[data-theme="light"] .trust-cue i {
+    color: #0066ff;
+}
+
+[data-theme="light"] .trust-btn {
+    background: linear-gradient(135deg, #0066ff 0%, #0052cc 100%);
+}
+
+[data-theme="light"] .trust-btn:hover {
+    box-shadow: 0 15px 40px rgba(0, 102, 255, 0.3);
+}
